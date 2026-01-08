@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Projects | Roots & Shoots Rwanda – Youth-Led Environmental Impact</title>
+    <meta name="description" content="Discover youth-led projects by Roots & Shoots Rwanda, part of the global Roots & Shoots movement founded by Dr. Jane Goodall. Protecting people, animals, and the environment through action and innovation.">
+    <meta name="keywords" content="roots and shoots rwanda, jane goodall, youth projects, environment, sustainability, clean water, gishwati, africa, conservation">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rootsandshoots.rw/projects.html">
+    <meta property="og:title" content="Projects | Roots & Shoots Rwanda – Youth-Led Environmental Impact">
+    <meta property="og:description" content="Discover youth-led projects by Roots & Shoots Rwanda, protecting people, animals, and the environment.">
+    <meta property="og:image" content="https://rootsandshoots.rw/assets/social-share.jpg"> <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rootsandshoots.rw/projects.html">
+    <meta property="twitter:title" content="Projects | Roots & Shoots Rwanda – Youth-Led Environmental Impact">
+    <meta property="twitter:description" content="Discover youth-led projects by Roots & Shoots Rwanda, protecting people, animals, and the environment.">
+    <meta property="twitter:image" content="https://rootsandshoots.rw/assets/social-share.jpg"> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Nature-inspired palette
+              'rs-green': '#6AB547', // Main brand green
+              'rs-brown': '#70543E', // Earthy brown
+              'rs-gray': '#F5F5F5',  // Soft gray background
+            },
+            fontFamily: {
+              // Open-source font
+              sans: ['Poppins', 'sans-serif'],
+            },
+            borderRadius: {
+              // Consistent rounded corners
+              '2xl': '1rem',
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      /* Base carousel styles */
+      .fade-carousel {
+        position: relative;
+        overflow: hidden;
+      }
+      .fade-carousel-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+        background-size: cover;
+        background-position: center;
+      }
+      .fade-carousel-slide.active {
+        opacity: 1;
+      }
+      .carousel-controls {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+        z-index: 10;
+      }
+      .carousel-control {
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .carousel-control:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+      /* Simple animated scroll-down indicator */
+      .scroll-down {
+        animation: bounce 2s infinite;
+      }
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-10px); }
+        60% { transform: translateY(-5px); }
+      }
+      /* Active nav link highlight */
+      .nav-link-active {
+        border-bottom: 3px solid #6AB547;
+        color: #6AB547;
+      }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Roots & Shoots Rwanda",
+      "url": "https://rootsandshoots.rw/",
+      "logo": "https://rootsandshoots.rw/assets/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/RootsShootsRwanda",
+        "https://www.twitter.com/RootsShootsRW",
+        "https://www.instagram.com/RootsShootsRW",
+        "https://rootsandshoots.org/"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Dr. Jane Goodall"
+      },
+      "programOf": {
+        "@type": "Organization",
+        "name": "The Jane Goodall Institute"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Roots & Shoots Rwanda Projects",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Project",
+            "name": "Project Gishwati",
+            "description": "Focus on forest conservation and youth environmental education in the Gishwati-Mukura National Park area."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Project",
+            "name": "Project Evergreen",
+            "description": "A youth-led initiative to plant native trees and establish green spaces in urban communities."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Project",
+            "name": "Kigali Recycling Initiative",
+            "description": "Empowering youth to turn plastic waste into eco-friendly products and promote recycling."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Project",
+            "name": "Clean Water Access",
+            "description": "Community projects focused on protecting water sources and promoting hygiene education."
+          }
+        }
+      ]
+    }
+    </script>
+
+</head>
+<body class="bg-white text-rs-brown font-sans antialiased">
+
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="assets/images/rs-logo.jpg" alt="Roots & Shoots Rwanda Logo" class="h-10 w-auto">
+            </a>
+            
+            <ul class="hidden md:flex items-center space-x-6">
+                <li><a href="index.html" class="hover:text-rs-green transition-colors">Home</a></li>
+                <li><a href="about.html" class="hover:text-rs-green transition-colors">About</a></li>
+                <li><a href="projects.html" class="font-semibold nav-link-active">Projects</a></li>
+                <li><a href="blog.html" class="hover:text-rs-green transition-colors">Blog</a></li>
+                <li><a href="contact.html" class="bg-rs-green text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-all">Get Involved</a></li>
+            </ul>
+
+            <div class="flex space-x-2 text-sm font-semibold">
+                <button onclick="changeLang('en')" class="lang-btn focus:outline-none hover:text-rs-green" aria-label="Switch to English">EN</button>
+                <span>|</span>
+                <button onclick="changeLang('fr')" class="lang-btn focus:outline-none hover:text-rs-green" aria-label="Switch to French">FR</button>
+                <span>|</span>
+                <button onclick="changeLang('rw')" class="lang-btn focus:outline-none hover:text-rs-green" aria-label="Switch to Kinyarwanda">RW</button>
+            </div>
+
+            <button class="md:hidden text-rs-brown" aria-label="Open menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+
+        <div class="bg-rs-gray">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-600">
+                <a href="index.html" class="hover:underline">Home</a>
+                <span>&rsaquo;</span>
+                <span class="font-semibold">Projects</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="relative h-[70vh] min-h-[400px] text-white overflow-hidden fade-carousel" data-carousel-id="hero-carousel" data-interval="5000">
+            <div class="fade-carousel-slide active" style="background-image: url('assets/images/roots-hero1.jpg');"></div>
+            <div class="fade-carousel-slide" style="background-image: url('assets/images/project-gishwati-canopy.jpg');"></div>
+            <div class="fade-carousel-slide" style="background-image: url('assets/images/hero-biodiversity-chameleon.jpg');"></div>
+
+            <div class="absolute inset-0 bg-black/60"></div>
+
+            <div class="carousel-controls">
+                <button class="carousel-control prev" aria-label="Previous Image">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                <button class="carousel-control next" aria-label="Next Image">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                </button>
+            </div>
+
+            <div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-4">
+                <h1 class="text-4xl md:text-6xl font-bold" data-aos="fade-down" data-i18n="our_projects">Our Projects</h1>
+                <p class="text-lg md:text-2xl mt-4 max-w-3xl" data-aos="fade-up" data-aos-delay="200" data-i18n="hero_subtitle">
+                    Youth-led initiatives creating a better future for people, animals, and the environment.
+                </p>
+            </div>
+
+            <div class="scroll-down absolute bottom-5 left-1/2 -translate-x-1/2 z-10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </div>
+        </section>
+
+        <section class="container mx-auto py-16 md:py-24 px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold mb-6" data-i18n="intro_title">Empowering Youth Changemakers</h2>
+                    <p class="text-lg mb-8" data-i18n="intro_text">
+                        Roots & Shoots Rwanda empowers youth to lead change using Dr. Jane Goodall’s four-step model: Inspire, Map, Act, and Celebrate.
+                    </p>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                        <div data-aos="fade-up" data-aos-delay="100">
+                            <div class="bg-rs-green/10 p-4 rounded-2xl flex justify-center items-center h-16 w-16 mx-auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-rs-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16v4m-2-2h4m5 11v4m-2-2h4M12 21a9 9 0 110-18 9 9 0 010 18z" /></svg>
+                            </div>
+                            <h3 class="font-semibold mt-2" data-i18n="step_inspire">Inspire</h3>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="200">
+                            <div class="bg-rs-green/10 p-4 rounded-2xl flex justify-center items-center h-16 w-16 mx-auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-rs-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13V7m0 13a1 1 0 001.447.894L15 20m0 0V7m0 13a1 1 0 001.447.894L21 20m-6-13a1 1 0 00-1.447-.894L9 7m0 0a1 1 0 00-1.447-.894L3 5m6 2v13m6-13v13m6-13v13" /></svg>
+                            </div>
+                            <h3 class="font-semibold mt-2" data-i18n="step_map">Map</h3>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="300">
+                            <div class="bg-rs-green/10 p-4 rounded-2xl flex justify-center items-center h-16 w-16 mx-auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-rs-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-7.026a2 2 0 01-1.789-2.894l3.5-7A2 2 0 0111.237 9H14zM4 10h2m2 0h2m2 0h2" /></svg>
+                            </div>
+                            <h3 class="font-semibold mt-2" data-i18n="step_act">Act</h3>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="400">
+                            <div class="bg-rs-green/10 p-4 rounded-2xl flex justify-center items-center h-16 w-16 mx-auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-rs-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A3.001 3.001 0 017 10h1M11 5.882a1.76 1.76 0 012.592-.093l2.407 2.407a1.76 1.76 0 01.093 2.592L13.5 13m-3-7.118V13m0 0L8 10m2 3h.01M17 17h.01" /></svg>
+                            </div>
+                            <h3 class="font-semibold mt-2" data-i18n="step_celebrate">Celebrate</h3>
+                        </div>
+                    </div>
+
+                    <blockquote class="mt-10 p-4 border-l-4 border-rs-green bg-rs-gray rounded-r-lg" data-aos="fade-up" data-aos-delay="500">
+                        <p class="text-lg italic" data-i18n="quote">"Every individual matters. Every individual has a role to play."</p>
+                        <cite class="block text-right mt-2 not-italic font-semibold">— Dr. Jane Goodall</cite>
+                    </blockquote>
+                </div>
+
+                <div class="h-80 md:h-[500px] rounded-2xl shadow-xl fade-carousel" data-aos="fade-left" data-carousel-id="intro-carousel" data-interval="6000">
+                    <div class="fade-carousel-slide active" style="background-image: url('assets/images/gallery-school-workshop.jpg');"></div>
+                    <div class="fade-carousel-slide" style="background-image: url('assets/images/gallery-group-photo.jpg');"></div>
+                    <div class="fade-carousel-slide" style="background-image: url('assets/images/about-jane-goodall.png');"></div>
+                    <div class="carousel-controls">
+                        <button class="carousel-control prev" aria-label="Previous Image"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg></button>
+                        <button class="carousel-control next" aria-label="Next Image"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-rs-gray py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up" data-i18n="gallery_title">Our Flagship Projects</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+
+                    <article class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]" data-aos="fade-up">
+                        <div class="h-64 fade-carousel" data-carousel-id="project-gishwati" data-interval="7000">
+                            <div class="fade-carousel-slide active" style="background-image: url('assets/images/roots-hero3.jpg');"></div>
+                            <div class="fade-carousel-slide" style="background-image: url('assets/images/roots-hero4.jpg');"></div>
+                            <div class="carousel-controls">
+                                <button class="carousel-control prev" aria-label="Previous Image"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg></button>
+                                <button class="carousel-control next" aria-label="Next Image"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2" data-i18n="gishwati_title">Project Gishwati</h3>
+                            <p class="mb-4" data-i18n="gishwati_desc">Focus on forest conservation and youth environmental education.</p>
+                            <p class="text-sm italic mb-4" data-i18n="gishwati_impact">Impact: 2,000 trees planted | 300 students engaged.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-rs-green/10 text-rs-green font-semibold px-3 py-1 rounded-full">🌳 Environment</span>
+                                <span class="text-xs bg-rs-green/10 text-rs-green font-semibold px-3 py-1 rounded-full">🐒 Wildlife</span>
+                            </div>
+                            <a href="#" class="inline-block bg-rs-green text-white font-semibold px-5 py-2 rounded-full hover:bg-opacity-90 transition-all" data-i18n="see_details">See Project Details &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]" data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-64 fade-carousel" data-carousel-id="project-evergreen" data-interval="7500">
+                            <div class="fade-carousel-slide active" style="background-image: url('assets/images/hero-youth-group-working.jpg');"></div>
+                            <div class="fade-carousel-slide" style="background-image: url('assets/images/gallery-chimpanzee.jpg');"></div>
+                            <div class="carousel-controls">
+                                <button class="carousel-control prev" aria-label="Previous Image"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg></button>
+                                <button class="carousel-control next" aria-label="Next Image"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2" data-i18n="evergreen_title">Project Evergreen</h3>
+                            <p class="mb-4" data-i18n="evergreen_desc">Creating urban green spaces and planting native tree species.</p>
+                            <p class="text-sm italic mb-4" data-i18n="evergreen_impact">Impact: 5+ community gardens | 500 youth volunteers.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-rs-green/10 text-rs-green font-semibold px-3 py-1 rounded-full">🌱 Reforestation</span>
+                                <span class="text-xs bg-rs-green/10 text-rs-green font-semibold px-3 py-1 rounded-full">🏙️ Urban</span>
+                            </div>
+                            <a href="#" class="inline-block bg-rs-green text-white font-semibold px-5 py-2 rounded-full hover:bg-opacity-90 transition-all" data-i18n="see_details">See Project Details &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]" data-aos="fade-up">
+                        <div class="h-64 fade-carousel" data-carousel-id="project-recycling" data-interval="6500">
+                            <div class="fade-carousel-slide active" style="background-image: url('assets/images/roots-hero3.jpg');"></div>
+                            <div class="fade-carousel-slide" style="background-image: url('assets/images/hero-community-action.jpg');"></div>
+                            <div class="carousel-controls">
+                                <button class="carousel-control prev" aria-label="Previous Image"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg></button>
+                                <button class="carousel-control next" aria-label="Next Image"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2" data-i18n="recycling_title">Kigali Recycling Initiative</h3>
+                            <p class="mb-4" data-i18n="recycling_desc">Turning plastic waste into eco-products and community art.</p>
+                            <p class="text-sm italic mb-4" data-i18n="recycling_impact">Impact: 1 ton of plastic recycled | 10 local artists trained.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-rs-green/10 text-rs-green font-semibold px-3 py-1 rounded-full">♻️ Recycling</span>
+                                <span class="text-xs bg-rs-green/10 text-rs-green font-semibold px-3 py-1 rounded-full">🎨 Innovation</span>
+                            </div>
+                            <a href="#" class="inline-block bg-rs-green text-white font-semibold px-5 py-2 rounded-full hover:bg-opacity-90 transition-all" data-i18n="see_details">See Project Details &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]" data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-64 fade-carousel" data-carousel-id="project-water" data-interval="8000">
+                            <div class="fade-carousel-slide active" style="background-image: url('assets/images/project-evergreen-school-garden.jpg');"></div>
+                            <div class="fade-carousel-slide" style="background-image: url('assets/images/project-gishwati-canopy.jpg');"></div>
+                            <div class="carousel-controls">
+                                <button class="carousel-control prev" aria-label="Previous Image"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg></button>
+                                <button class="carousel-control next" aria-label="Next Image"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2" data-i18n="water_title">Clean Water Access</h3>
+                            <p class="mb-4" data-i18n="water_desc">Protecting local water sources and promoting hygiene education in rural schools.</p>
+                            <p class="text-sm italic mb-4" data-i18n="water_impact">Impact: 3 wells protected | 5 schools with new hygiene stations.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-rs-green/10 text-rs-green font-semibold px-3 py-1 rounded-full">💧 Water</span>
+                                <span class="text-xs bg-rs-green/10 text-rs-green font-semibold px-3 py-1 rounded-full">🧑‍🤝‍🧑 Community</span>
+                            </div>
+                            <a href="#" class="inline-block bg-rs-green text-white font-semibold px-5 py-2 rounded-full hover:bg-opacity-90 transition-all" data-i18n="see_details">See Project Details &rarr;</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 container mx-auto px-4 overflow-hidden">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up" data-i18n="stories_title">Featured Impact Stories</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="border border-gray-200 rounded-2xl shadow-sm p-6" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/project-waste-management.jpg" alt="Students with eco-products" class="h-48 w-full object-cover rounded-lg mb-4" loading="lazy">
+                    <h3 class="text-xl font-bold mb-2" data-i18n="story1_title">Waste to Wealth</h3>
+                    <p class="mb-4" data-i18n="story1_desc">How Rwandan students turned plastic waste into eco-products.</p>
+                    <a href="#" class="font-semibold text-rs-green hover:underline" data-i18n="read_more">Read More &rarr;</a>
+                </div>
+                <div class="border border-gray-200 rounded-2xl shadow-sm p-6" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/school-garden.jpg" alt="School garden" class="h-48 w-full object-cover rounded-lg mb-4" loading="lazy">
+                    <h3 class="text-xl font-bold mb-2" data-i18n="story2_title">The School Garden</h3>
+                    <p class="mb-4" data-i18n="story2_desc">A primary school's journey to food security and sustainability.</p>
+                    <a href="#" class="font-semibold text-rs-green hover:underline" data-i18n="read_more">Read More &rarr;</a>
+                </div>
+                <div class="border border-gray-200 rounded-2xl shadow-sm p-6" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/community-meeting.jpg" alt="Community meeting" class="h-48 w-full object-cover rounded-lg mb-4" loading="lazy">
+                    <h3 class="text-xl font-bold mb-2" data-i18n="story3_title">A Voice for Wildlife</h3>
+                    <p class="mb-4" data-i18n="story3_desc">Youth leaders champion conservation efforts for local wildlife.</p>
+                    <a href="#" class="font-semibold text-rs-green hover:underline" data-i18n="read_more">Read More &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative py-20 md:py-32 text-white text-center overflow-hidden" data-aos="zoom-in">
+            <div class="absolute inset-0 fade-carousel" data-carousel-id="cta-bg-carousel" data-interval="6000">
+                <div class="fade-carousel-slide active" style="background-image: url('assets/images/gallery-tree-planting.jpg');"></div>
+                <div class="fade-carousel-slide" style="background-image: url('assets/images/hero-evergreen-school.jpg');"></div>
+                <div class="fade-carousel-slide" style="background-image: url('assets/images/hero-youth-group-working.jpg');"></div>
+            </div>
+            
+            <div class="absolute inset-0 bg-rs-green/90"></div>
+
+            <div class="relative z-10 container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="cta_title">Have an idea for your community?</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8" data-i18n="cta_subtext">
+                    Roots & Shoots is powered by young changemakers. Start your own project and join our global movement.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="contact.html" class="bg-white text-rs-green font-bold px-8 py-3 rounded-full text-lg hover:bg-gray-100 transition-all" data-i1running="true" data-i18n="cta_contact">
+                        Get in Touch
+                    </a>
+                    <a href="project-guidelines.html" class="bg-transparent border-2 border-white text-white font-bold px-8 py-3 rounded-full text-lg hover:bg-white hover:text-rs-green transition-all" data-i18n="cta_guidelines">
+                        View Project Guidelines
+                    </a>
+                </div>
+                <p class="text-sm mt-10 opacity-80" data-i18n="cta_footer">
+                    In collaboration with the global Roots & Shoots network — a program of the Jane Goodall Institute.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-rs-brown text-gray-300 py-16">
+        <div class="container mx-auto px-4 grid md:grid-cols-4 gap-8">
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Roots & Shoots Rwanda</h4>
+                <p class="text-sm" data-i18n="footer_desc">Empowering youth to make a difference for people, animals, and the environment.</p>
+                <a href="https://rootsandshoots.org/" target="_blank" rel="noopener noreferrer" class="text-sm text-rs-green hover:underline mt-2 inline-block">Learn more at rootsandshoots.org</a>
+            </div>
+            
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4" data-i18n="footer_links">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="about.html" class="hover:underline">About Us</a></li>
+                    <li><a href="projects.html" class="hover:underline">Our Projects</a></li>
+                    <li><a href="contact.html" class="hover:underline">Get Involved</a></li>
+                    <li><a href="blog.html" class="hover:underline">News & Stories</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4" data-i18n="footer_contact">Contact</h4>
+                <ul class="space-y-2 text-sm">
+                    <li>KG 12 Ave, Kigali</li>
+                    <li>info@rootsandshoots.rw</li>
+                    <li>+250 788 123 456</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4" data-i18n="footer_follow">Follow Us</h4>
+                <div class="flex space-x-4">
+                    <a href="#" aria-label="Facebook" class="text-gray-300 hover:text-white"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z"/></svg></a>
+                    <a href="#" aria-label="Twitter" class="text-gray-300 hover:text-white"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616v.065c0 2.18 1.523 4.135 3.57 4.568-.4.108-.82.164-1.25.164-.28 0-.55-.027-.81-.079.57 1.789 2.21 3.088 4.16 3.125-1.48 1.157-3.35 1.846-5.38 1.846-.35 0-.69-.02-1.03-.06 1.91 1.232 4.18 1.95 6.62 1.95 7.95 0 12.3-6.58 12.3-12.3v-.557c.84-.606 1.57-1.365 2.15-2.23z"/></svg></a>
+                    <a href="#" aria-label="Instagram" class="text-gray-300 hover:text-white"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.225-1.664 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07-3.204 0-3.584-.012-4.85-.07-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.225 1.664-4.771 4.919-4.919 1.266.058 1.646.07 4.85.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.308.196-6.101 1.99-6.297 6.297-.058 1.28-.072 1.687-.072 4.947s.014 3.667.072 4.947c.196 4.308 1.99 6.101 6.297 6.297 1.28.058 1.687.072 4.947.072s3.667-.014 4.947-.072c4.308-.196 6.101-1.99 6.297-6.297.058-1.28.072-1.687.072-4.947s-.014-3.667-.072-4.947c-.196-4.308-1.99-6.101-6.297-6.297-1.28-.058-1.687-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z"/></svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-8 pt-8 border-t border-gray-700 text-center text-sm">
+            <p>&copy; <span id="current-year"></span> Roots & Shoots Rwanda — in partnership with the Jane Goodall Institute.</p>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/i18next@23.7.11/dist/umd/i18next.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        // --- Translation Data ---
+        const resources = {
+            en: {
+                translation: {
+                    "our_projects": "Our Projects",
+                    "hero_subtitle": "Youth-led initiatives creating a better future for people, animals, and the environment.",
+                    "intro_title": "Empowering Youth Changemakers",
+                    "intro_text": "Roots & Shoots Rwanda empowers youth to lead change using Dr. Jane Goodall’s four-step model: Inspire, Map, Act, and Celebrate.",
+                    "step_inspire": "Inspire",
+                    "step_map": "Map",
+                    "step_act": "Act",
+                    "step_celebrate": "Celebrate",
+                    "quote": "\"Every individual matters. Every individual has a role to play.\"",
+                    "gallery_title": "Our Flagship Projects",
+                    "gishwati_title": "Project Gishwati",
+                    "gishwati_desc": "Focus on forest conservation and youth environmental education.",
+                    "gishwati_impact": "Impact: 2,000 trees planted | 300 students engaged.",
+                    "evergreen_title": "Project Evergreen",
+                    "evergreen_desc": "Creating urban green spaces and planting native tree species.",
+                    "evergreen_impact": "Impact: 5+ community gardens | 500 youth volunteers.",
+                    "recycling_title": "Kigali Recycling Initiative",
+                    "recycling_desc": "Turning plastic waste into eco-products and community art.",
+                    "recycling_impact": "Impact: 1 ton of plastic recycled | 10 local artists trained.",
+                    "water_title": "Clean Water Access",
+                    "water_desc": "Protecting local water sources and promoting hygiene education in rural schools.",
+                    "water_impact": "Impact: 3 wells protected | 5 schools with new hygiene stations.",
+                    "see_details": "See Project Details →",
+                    "stories_title": "Featured Impact Stories",
+                    "story1_title": "Waste to Wealth",
+                    "story1_desc": "How Rwandan students turned plastic waste into eco-products.",
+                    "story2_title": "The School Garden",
+                    "story2_desc": "A primary school's journey to food security and sustainability.",
+                    "story3_title": "A Voice for Wildlife",
+                    "story3_desc": "Youth leaders champion conservation efforts for local wildlife.",
+                    "read_more": "Read More →",
+                    "cta_title": "Have an idea for your community?",
+                    "cta_subtext": "Roots & Shoots is powered by young changemakers. Start your own project and join our global movement.",
+                    "cta_contact": "Get in Touch",
+                    "cta_guidelines": "View Project Guidelines",
+                    "cta_footer": "In collaboration with the global Roots & Shoots network — a program of the Jane Goodall Institute.",
+                    "footer_desc": "Empowering youth to make a difference for people, animals, and the environment.",
+                    "footer_links": "Quick Links",
+                    "footer_contact": "Contact",
+                    "footer_follow": "Follow Us"
+                }
+            },
+            fr: {
+                translation: {
+                    "our_projects": "Nos Projets",
+                    "hero_subtitle": "Des initiatives menées par des jeunes pour créer un avenir meilleur pour les personnes, les animaux et l'environnement.",
+                    "intro_title": "Autonomiser les Jeunes Changemakers",
+                    "intro_text": "Roots & Shoots Rwanda donne aux jeunes les moyens de mener le changement en utilisant le modèle en quatre étapes du Dr Jane Goodall : Inspirer, Cartographier, Agir et Célébrer.",
+                    "step_inspire": "Inspirer",
+                    "step_map": "Cartographier",
+                    "step_act": "Agir",
+                    "step_celebrate": "Célébrer",
+                    "quote": "\"Chaque individu compte. Chaque individu a un rôle à jouer.\"",
+                    "gallery_title": "Nos Projets Phares",
+                    "gishwati_title": "Projet Gishwati",
+                    "gishwati_desc": "Focus sur la conservation de la forêt et l'éducation environnementale des jeunes.",
+                    "gishwati_impact": "Impact : 2 000 arbres plantés | 300 étudiants engagés.",
+                    "evergreen_title": "Projet Evergreen",
+                    "evergreen_desc": "Création d'espaces verts urbains et plantation d'espèces d'arbres indigènes.",
+                    "evergreen_impact": "Impact : 5+ jardins communautaires | 500 jeunes bénévoles.",
+                    "recycling_title": "Initiative de Recyclage de Kigali",
+                    "recycling_desc": "Transformer les déchets plastiques en éco-produits et en art communautaire.",
+                    "recycling_impact": "Impact : 1 tonne de plastique recyclé | 10 artistes locaux formés.",
+                    "water_title": "Accès à l'Eau Propre",
+                    "water_desc": "Protéger les sources d'eau locales et promouvoir l'éducation à l'hygiène dans les écoles rurales.",
+                    "water_impact": "Impact : 3 puits protégés | 5 écoles avec de nouvelles stations d'hygiène.",
+                    "see_details": "Voir les Détails →",
+                    "stories_title": "Histoires d'Impact en Vedette",
+                    "story1_title": "Des Déchets à la Richesse",
+                    "story1_desc": "Comment des étudiants rwandais ont transformé des déchets plastiques en éco-produits.",
+                    "story2_title": "Le Jardin de l'École",
+                    "story2_desc": "Le parcours d'une école primaire vers la sécurité alimentaire et la durabilité.",
+                    "story3_title": "Une Voix pour la Faune",
+                    "story3_desc": "De jeunes leaders défendent les efforts de conservation de la faune locale.",
+                    "read_more": "Lire la Suite →",
+                    "cta_title": "Avez-vous une idée pour votre communauté ?",
+                    "cta_subtext": "Roots & Shoots est propulsé par de jeunes acteurs du changement. Lancez votre propre projet et rejoignez notre mouvement mondial.",
+                    "cta_contact": "Contactez-nous",
+                    "cta_guidelines": "Voir les Directives",
+                    "cta_footer": "En collaboration avec le réseau mondial Roots & Shoots — un programme de l'Institut Jane Goodall.",
+                    "footer_desc": "Donner aux jeunes les moyens de faire la différence pour les gens, les animaux et l'environnement.",
+                    "footer_links": "Liens Rapides",
+                    "footer_contact": "Contact",
+                    "footer_follow": "Suivez-nous"
+                }
+            },
+            rw: {
+                translation: {
+                    "our_projects": "Imishinga Yacu",
+                    "hero_subtitle": "Ibikorwa biyobowe n'urubyiruko bigamije ejo hazaza heza h'abantu, inyamaswa n'ibidukikije.",
+                    "intro_title": "Guha Ubushobozi Urubyiruko Ruhanga Impinduka",
+                    "intro_text": "Roots & Shoots Rwanda iha ubushobozi urubyiruko kuyobora impinduka hakoreshejwe uburyo bwa Dr. Jane Goodall bw'intambwe enye: Gukangurira, Gukora Ikarita, Gukora, no Kwishimira.",
+                    "step_inspire": "Gukangurira",
+                    "step_map": "Gukora Ikarita",
+                    "step_act": "Gukora",
+                    "step_celebrate": "Kwishimira",
+                    "quote": "\"Buri muntu ni ingenzi. Buri muntu afite uruhare agomba gukina.\"",
+                    "gallery_title": "Imishinga Yacu y'Indashyikirwa",
+                    "gishwati_title": "Umushinga Gishwati",
+                    "gishwati_desc": "Kwita ku kubungabunga ishyamba n'uburere ku bidukikije mu rubyiruko.",
+                    "gishwati_impact": "Ibyagezweho: Ibiti 2,000 byatewe | Abanyeshuri 300 bitabiriye.",
+                    "evergreen_title": "Umushinga Evergreen",
+                    "evergreen_desc": "Gushyiraho ahantu hatoshye mu mijyi no gutera amoko y'ibiti kavukire.",
+                    "evergreen_impact": "Ibyagezweho: Uturima 5+ tw'abaturage | Abakorerabushake 500 b'urubyiruko.",
+                    "recycling_title": "Gahunda yo Gutunganya Imyanda i Kigali",
+                    "recycling_desc": "Guhindura imyanda ya pulasitiki ibicuruzwa by'ibidukikije n'ubuhanzi.",
+                    "recycling_impact": "Ibyagezweho: Toni 1 ya pulasitiki yatunganyijwe | Abahanzi 10 baho bahuguwe.",
+                    "water_title": "Kubona Amazi Meza",
+                    "water_desc": "Kurinda amasoko y'amazi y'abaturage no guteza imbere uburezi ku isuku mu mashuri yo mu cyaro.",
+                    "water_impact": "Ibyagezweho: Amariba 3 arinzwe | Amashuri 5 afite aho gukarabira hashyashya.",
+                    "see_details": "Reba Ibindi →",
+                    "stories_title": "Inkuru Z'impinduka Zaranze",
+                    "story1_title": "Imyanda Ivamo Ubutunzi",
+                    "story1_desc": "Uko abanyeshuri bo mu Rwanda bahinduye imyanda ya pulasitiki ibicuruzwa by'ibidukikije.",
+                    "story2_title": "Akarima k'Ishuri",
+                    "story2_desc": "Urugendo rw'ishuri ribanza rwerekeza ku kwihaza mu biribwa no kuramba.",
+                    "story3_title": "Ijwi ry'Inyamaswa zo mu Gasozi",
+                    "story3_desc": "Abayobozi b'urubyiruko bashyigikira imbaraga zo kubungabunga inyamaswa zo mu gasozi.",
+                    "read_more": "Soma Byinshi →",
+                    "cta_title": "Ufite igitekerezo ku baturage bawe?",
+                    "cta_subtext": "Roots & Shoots iterwa imbaraga n'abakiri bato bahanga impinduka. Tangira umushinga wawe kandi winjire mu rugendo rwacu rw'isi yose.",
+                    "cta_contact": "Twandikire",
+                    "cta_guidelines": "Reba Amabwiriza",
+                    "cta_footer": "Ku bufatanye n'umuyoboro w'isi yose wa Roots & Shoots — gahunda ya Jane Goodall Institute.",
+                    "footer_desc": "Guha ubushobozi urubyiruko gukora itandukaniro ku bantu, inyamaswa, n'ibidukikije.",
+                    "footer_links": "Inzira z'Ibyihuse",
+                    "footer_contact": "Aho Wadusanga",
+                    "footer_follow": "Dukurikire"
+                }
+            }
+        };
+
+        // --- Wait for DOM to load ---
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- 1. Initialize AOS (Animate on Scroll) ---
+            AOS.init({
+                duration: 800, // Animation duration
+                once: true,    // Animate only once
+                offset: 100,   // Offset (in px) from the top of the viewport
+            });
+
+            // --- 2. Initialize i18next (Translations) ---
+            i18next.init({
+                resources,
+                lng: 'en', // Default language
+                fallbackLng: 'en',
+                debug: false,
+                interpolation: {
+                    escapeValue: false // Not needed for simple text
+                }
+            }, (err, t) => {
+                if (err) return console.error('i18next init error:', err);
+                updateContent();
+                updateActiveLangButton('en');
+            });
+
+            // --- 3. Translation: Content Updater Function ---
+            function updateContent() {
+                document.querySelectorAll('[data-i18n]').forEach(element => {
+                    const key = element.getAttribute('data-i18n');
+                    element.innerHTML = i18next.t(key);
+                });
+                // Update HTML lang attribute for accessibility
+                document.documentElement.lang = i18next.language;
+            }
+            
+            // --- 4. Translation: Language Change Handler ---
+            window.changeLang = (lng) => {
+                i18next.changeLanguage(lng, (err, t) => {
+                    if (err) return console.error('i18next changeLanguage error:', err);
+                    updateContent();
+                    updateActiveLangButton(lng);
+                });
+            };
+
+            function updateActiveLangButton(lng) {
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    if (btn.textContent.toLowerCase() === lng) {
+                        btn.classList.add('text-rs-green', 'font-bold');
+                    } else {
+                        btn.classList.remove('text-rs-green', 'font-bold');
+                    }
+                });
+            }
+
+            // --- 5. Carousel Logic ---
+            const carousels = {}; // Store intervals
+
+            function initFadeCarousel(carouselElement) {
+                const slides = carouselElement.querySelectorAll('.fade-carousel-slide');
+                const intervalTime = parseInt(carouselElement.dataset.interval, 10) || 5000;
+                const carouselId = carouselElement.dataset.carouselId;
+                let currentIndex = 0;
+
+                if (slides.length < 2) return; // No need for a carousel
+
+                function showSlide(index) {
+                    slides.forEach((slide, i) => {
+                        slide.classList.toggle('active', i === index);
+                    });
+                }
+
+                function nextSlide() {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    showSlide(currentIndex);
+                }
+                
+                function prevSlide() {
+                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    showSlide(currentIndex);
+                }
+
+                // Automatic sliding
+                function startAutoSlide() {
+                    if (carousels[carouselId]) {
+                        clearInterval(carousels[carouselId]);
+                    }
+                    carousels[carouselId] = setInterval(nextSlide, intervalTime);
+                }
+                
+                // Manual controls
+                carouselElement.querySelector('.carousel-control.next')?.addEventListener('click', () => {
+                    nextSlide();
+                    startAutoSlide(); // Reset interval
+                });
+                
+                carouselElement.querySelector('.carousel-control.prev')?.addEventListener('click', () => {
+                    prevSlide();
+                    startAutoSlide(); // Reset interval
+                });
+
+                // Start the show
+                showSlide(currentIndex);
+                startAutoSlide();
+            }
+
+            // Initialize all carousels on the page
+            document.querySelectorAll('.fade-carousel').forEach(initFadeCarousel);
+
+
+            // --- 6. Footer: Set Current Year ---
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        });
+    </script>
+
+</body>
+</html>

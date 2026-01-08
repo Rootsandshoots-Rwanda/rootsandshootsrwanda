@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roots & Shoots Rwanda | Empowering Youth for a Sustainable Future</title>
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="description" content="Roots & Shoots Rwanda empowers youth to create sustainable change through environmental action, conservation, and community service. Join Dr. Jane Goodall's movement.">
+    <meta name="keywords" content="Roots and Shoots, Rwanda, Jane Goodall, Youth Empowerment, Environment, Conservation, Gishwati, Reforestation, Education">
+    <meta name="author" content="Roots & Shoots Rwanda">
+    <meta property="og:title" content="Roots & Shoots Rwanda - Youth-Led Environmental Action">
+    <meta property="og:description" content="Empowering Rwanda's youth to create positive change for people, animals, and the environment.">
+    <meta property="og:image" content="assets/images/hero-gishwati-landscape.jpg">
+    <meta property="og:url" content="https://rootsandshoots.rw">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Roots & Shoots Rwanda">
+    <meta name="twitter:description" content="Youth-led environmental action inspired by Dr. Jane Goodall">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        earthGreen: '#2E7D32',
+                        lightBeige: '#FAF9F6',
+                        accentBlue: '#1976D2',
+                        darkGreen: '#1B5E20',
+                        softGreen: '#4CAF50',
+                        darkGray: '#2D3748',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'system-ui', '-apple-system', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'pulse-slow': 'pulse 3s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            },
+            corePlugins: {
+                container: false,
+            }
+        }
+    </script>
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- i18next -->
+    <script src="https://unpkg.com/i18next/i18next.min.js"></script>
+    
+    <style>
+        /* Custom Styles */
+        .navbar-transparent {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .navbar-solid {
+            background-color: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .gradient-overlay {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(46, 125, 50, 0.3) 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .floating-tree {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .partner-logo {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        
+        .partner-logo:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Focus styles for accessibility */
+        :focus {
+            outline: 2px solid #1976D2;
+            outline-offset: 2px;
+        }
+        
+        /* Mobile menu animation */
+        .mobile-menu-enter {
+            max-height: 0;
+            opacity: 0;
+        }
+        
+        .mobile-menu-enter-active {
+            max-height: 500px;
+            opacity: 1;
+            transition: all 0.3s ease-out;
+        }
+        
+        .mobile-menu-exit {
+            max-height: 500px;
+            opacity: 1;
+        }
+        
+        .mobile-menu-exit-active {
+            max-height: 0;
+            opacity: 0;
+            transition: all 0.3s ease-in;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #2E7D32;
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1B5E20;
+        }
+    </style>
+</head>
+<body class="bg-lightBeige text-gray-800 antialiased font-sans">
+
+    <!-- Sticky Navbar -->
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 navbar-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3">
+                <img src="assets/images/rs-logo.jpg" alt="Roots & Shoots Rwanda Logo" class="h-10 w-auto rounded-lg shadow-md">
+                <span class="text-xl font-bold text-white hidden sm:block" data-i18n="nav.brand"></span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-6 font-medium text-white">
+                <a href="#hero" class="hover:text-softGreen transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-white/10" data-i18n="nav.home">Home</a>
+                <a href="#about" class="hover:text-softGreen transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-white/10" data-i18n="nav.about">About</a>
+                <a href="#programs" class="hover:text-softGreen transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-white/10" data-i18n="nav.programs">Programs</a>
+                <a href="#impact" class="hover:text-softGreen transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-white/10" data-i18n="nav.impact">Impact</a>
+                <a href="#stories" class="hover:text-softGreen transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-white/10" data-i18n="nav.stories">Stories</a>
+                <a href="#contact" class="hover:text-softGreen transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-white/10" data-i18n="nav.contact">Contact</a>
+            </nav>
+
+            <!-- Desktop Action Buttons -->
+            <div class="hidden lg:flex items-center gap-4">
+                <!-- Language Switcher -->
+                <div class="flex gap-2 text-sm font-medium text-white bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full">
+                    <button onclick="changeLang('en')" class="hover:text-softGreen transition-colors" aria-label="Switch to English">EN</button>
+                    <span class="text-gray-300">|</span>
+                    <button onclick="changeLang('fr')" class="hover:text-softGreen transition-colors" aria-label="Switch to French">FR</button>
+                    <span class="text-gray-300">|</span>
+                    <button onclick="changeLang('rw')" class="hover:text-softGreen transition-colors" aria-label="Switch to Kinyarwanda">RW</button>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <a href="#donate" class="bg-white text-earthGreen px-5 py-2 rounded-full hover:bg-gray-100 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl" data-i18n="nav.donate">Donate</a>
+                <a href="#join" class="bg-earthGreen text-white px-5 py-2 rounded-full hover:bg-darkGreen transition-all duration-200 font-semibold shadow-lg hover:shadow-xl" data-i18n="nav.cta">Join Movement</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="lg:hidden text-white focus:outline-none" aria-label="Toggle Mobile Menu" aria-expanded="false">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+            <div class="flex flex-col p-6 gap-4 font-medium text-earthGreen">
+                <a href="#hero" class="hover:text-accentBlue py-2 border-b border-gray-100" data-i18n="nav.home">Home</a>
+                <a href="#about" class="hover:text-accentBlue py-2 border-b border-gray-100" data-i18n="nav.about">About</a>
+                <a href="#programs" class="hover:text-accentBlue py-2 border-b border-gray-100" data-i18n="nav.programs">Projects</a>
+                <a href="#impact" class="hover:text-accentBlue py-2 border-b border-gray-100" data-i18n="nav.impact">Impact</a>
+                <a href="#stories" class="hover:text-accentBlue py-2 border-b border-gray-100" data-i18n="nav.stories">Stories</a>
+                <a href="#contact" class="hover:text-accentBlue py-2 border-b border-gray-100" data-i18n="nav.contact">Contact</a>
+                
+                <div class="flex gap-4 py-4 border-t border-gray-100 justify-center">
+                    <button onclick="changeLang('en')" class="px-3 py-1 rounded border border-earthGreen hover:bg-earthGreen hover:text-white transition">EN</button>
+                    <button onclick="changeLang('fr')" class="px-3 py-1 rounded border border-earthGreen hover:bg-earthGreen hover:text-white transition">FR</button>
+                    <button onclick="changeLang('rw')" class="px-3 py-1 rounded border border-earthGreen hover:bg-earthGreen hover:text-white transition">RW</button>
+                </div>
+                
+                <div class="flex flex-col gap-3 pt-2">
+                    <a href="#donate" class="bg-earthGreen text-white text-center py-3 rounded-lg font-semibold" data-i18n="nav.donate">Donate Now</a>
+                    <a href="#join" class="bg-accentBlue text-white text-center py-3 rounded-lg font-semibold" data-i18n="nav.cta">Join Movement</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Video -->
+    <section id="hero" class="relative h-screen w-full overflow-hidden">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="assets/videos/hero-background.mp4" type="video/mp4">
+            <source src="assets/videos/hero-background.webm" type="video/webm">
+            <!-- Fallback image if video doesn't load -->
+            <img src="assets/images/hero-gishwati-landscape.jpg" alt="Gishwati Forest Landscape" class="absolute inset-0 w-full h-full object-cover">
+        </video>
+        
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 gradient-overlay"></div>
+        
+        <!-- Hero Content -->
+        <div class="relative h-full flex items-center justify-center text-center px-4">
+            <div class="max-w-4xl" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" data-i18n="hero.title">
+                    Empowering Rwanda's Next Generation of Changemakers
+                </h1>
+                <p class="text-xl text-gray-200 mb-10 max-w-2xl mx-auto" data-i18n="hero.subtitle">
+                    Inspired by Dr. Jane Goodall, we mobilize youth to create sustainable change for people, animals, and the environment.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#programs" class="bg-earthGreen text-white px-8 py-4 rounded-full font-semibold hover:bg-darkGreen transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center gap-2" data-i18n="hero.btn_explore">
+                        <i data-lucide="compass" class="w-5 h-5"></i>
+                        Explore Our Projects
+                    </a>
+                    <a href="#donate" class="bg-white text-earthGreen px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center gap-2" data-i18n="hero.btn_donate">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                        Donate Now
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-white" aria-label="Scroll to next section">
+                <i data-lucide="chevron-down" class="w-8 h-8"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Quick Overview Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold text-earthGreen mb-4" data-i18n="overview.title">Our Guiding Principles</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto" data-i18n="overview.subtitle">
+                Rooted in compassion and driven by action, we follow a holistic approach to creating positive change
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Mission Card -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-lightBeige p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                    <i data-lucide="target" class="w-8 h-8 text-earthGreen"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-gray-800" data-i18n="overview.mission_title">Our Mission</h3>
+                <p class="text-gray-600 mb-6" data-i18n="overview.mission_desc">
+                    To foster respect and compassion for all living things and inspire action to make the world better.
+                </p>
+                <a href="about.html#mission" class="text-earthGreen font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                    <span data-i18n="overview.btn_learn">Learn more</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+            
+            <!-- Vision Card -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-lightBeige p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                    <i data-lucide="eye" class="w-8 h-8 text-earthGreen"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-gray-800" data-i18n="overview.vision_title">Our Vision</h3>
+                <p class="text-gray-600 mb-6" data-i18n="overview.vision_desc">
+                    A global community of youth empowered to lead and influence change for a better world.
+                </p>
+                <a href="about.html#vision" class="text-earthGreen font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                    <span data-i18n="overview.btn_learn">Learn more</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+            
+            <!-- Values Card -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-lightBeige p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                    <i data-lucide="heart" class="w-8 h-8 text-earthGreen"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-gray-800" data-i18n="overview.values_title">Our Values</h3>
+                <p class="text-gray-600 mb-6" data-i18n="overview.values_desc">
+                    Compassion, respect, sustainability, and youth empowerment guide everything we do.
+                </p>
+                <a href="about.html#values" class="text-earthGreen font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                    <span data-i18n="overview.btn_learn">Learn more</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+            
+            <!-- Who We Help Card -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-lightBeige p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                    <i data-lucide="users" class="w-8 h-8 text-earthGreen"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-gray-800" data-i18n="overview.help_title">Who We Help</h3>
+                <p class="text-gray-600 mb-6" data-i18n="overview.help_desc">
+                    Youth, communities, and the environment through education, conservation, and empowerment.
+                </p>
+                <a href="about.html#impact" class="text-earthGreen font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                    <span data-i18n="overview.btn_learn">Learn more</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs / What We Do Section -->
+    <section id="programs" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-earthGreen mb-4" data-i18n="programs.title">Our project</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto" data-i18n="programs.subtitle">
+                    From local initiatives to global impact, our projects empower youth to create sustainable change
+                </p>
+                <div class="w-24 h-1 bg-accentBlue mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program 1: Gishwati Reforestation -->
+                <div class="bg-lightBeige rounded-xl overflow-hidden shadow-lg card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="assets/images/gallery-tree-planting.jpg" alt="Gishwati Forest Reforestation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-white p-3 rounded-full shadow-lg text-earthGreen">
+                            <i data-lucide="leaf" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800" data-i18n="programs.card1_title">Gishwati Reforestation</h3>
+                        <p class="text-gray-600 mb-5" data-i18n="programs.card1_desc">
+                            Restoring biodiversity in the Gishwati-Mukura landscape through tree planting and conservation education.
+                        </p>
+                        <a href="projects.html#gishwati" class="inline-flex items-center text-earthGreen font-semibold hover:text-darkGreen transition-colors">
+                            <span data-i18n="programs.btn_view">View Program</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Program 2: Evergreen Classrooms -->
+                <div class="bg-lightBeige rounded-xl overflow-hidden shadow-lg card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="assets/images/gallery-school-workshop.jpg" alt="School Environmental Education" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-white p-3 rounded-full shadow-lg text-earthGreen">
+                            <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800" data-i18n="programs.card2_title">Evergreen Classrooms</h3>
+                        <p class="text-gray-600 mb-5" data-i18n="programs.card2_desc">
+                            Integrating environmental education into school curriculums to build eco-conscious future leaders.
+                        </p>
+                        <a href="projects.html#evergreen" class="inline-flex items-center text-earthGreen font-semibold hover:text-darkGreen transition-colors">
+                            <span data-i18n="programs.btn_view">View Program</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                
+            
+            <!-- View All Programs Button -->
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="projects.html" class="inline-flex items-center bg-earthGreen text-white px-8 py-3 rounded-full font-semibold hover:bg-darkGreen transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <span data-i18n="programs.btn_all">View All Programs</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Metrics Section -->
+    <section id="impact" class="py-20 bg-earthGreen text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="impact.title">Our Impact in Numbers</h2>
+                <p class="text-gray-200 max-w-3xl mx-auto" data-i18n="impact.subtitle">
+                    Measurable change driven by youth action across Rwanda
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center" id="counter-container">
+                <div data-aos="fade-up" data-aos-delay="0">
+                    <div class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 counter" data-target="50000">0</div>
+                    <div class="text-lg font-semibold opacity-90" data-i18n="impact.trees">Trees Planted</div>
+                    <div class="text-sm opacity-75 mt-2">
+                        <i data-lucide="sprout" class="w-4 h-4"></i>
+                    </div>
+                    
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 counter" data-target="10">0</div>
+                    <div class="text-lg font-semibold opacity-90" data-i18n="impact.schools">Schools Engaged</div>
+                    <div class="text-sm opacity-75 mt-2">
+                        <i data-lucide="school" class="w-4 h-4"></i>
+                    </div>
+                    
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 counter" data-target="1200">0</div>
+                    <div class="text-lg font-semibold opacity-90" data-i18n="impact.youth">Youth Reached</div>
+                    <div class="text-sm opacity-75 mt-2">
+                        <i data-lucide="users" class="w-4 h-4"></i>
+                    </div>
+                    
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 counter" data-target="2">0</div>
+                    <div class="text-lg font-semibold opacity-90" data-i18n="impact.projects">Active Projects</div>
+                    <div class="text-sm opacity-75 mt-2">
+                        <i data-lucide="globe" class="w-4 h-4"></i>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="text-center mt-16" data-aos="fade-up">
+                <a href="impact.html" class="inline-flex items-center border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-earthGreen transition-all duration-300">
+                    <span data-i18n="impact.btn">View Full Impact Dashboard</span>
+                    <i data-lucide="bar-chart" class="w-5 h-5 ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Team Section -->
+<section id="team" class="py-20 bg-lightBeige">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Title -->
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold text-earthGreen mb-4" data-i18n="team.title">Meet Our Team</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto" data-i18n="team.subtitle">
+                The passionate people driving Roots & Shoots Rwanda forward
+            </p>
+        </div>
+
+        <!-- Team Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Team Member 1 -->
+            <div class="bg-white rounded-xl p-6 shadow-lg card-hover" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center mb-4">
+                    <!-- Placeholder until images arrive -->
+                    <i data-lucide="user" class="w-8 h-8 text-gray-500"></i>
+                </div>
+                <h3 class="font-bold text-lg text-gray-800" data-i18n="team.member1_name">Clémence Idukunda</h3>
+                <p class="text-sm text-earthGreen mb-3" data-i18n="team.member1_role">Legal Representative</p>
+                <p class="text-gray-600 text-sm" data-i18n="team.member1_desc">
+                    Leading the vision and direction of Roots & Shoots Rwanda with passion and commitment.
+                </p>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="bg-white rounded-xl p-6 shadow-lg card-hover" data-aos="fade-up" data-aos-delay="150">
+                <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center mb-4">
+                    <i data-lucide="user" class="w-8 h-8 text-gray-500"></i>
+                </div>
+                <h3 class="font-bold text-lg text-gray-800" data-i18n="team.member2_name">Marie Providence Tuyishimire</h3>
+                <p class="text-sm text-earthGreen mb-3" data-i18n="team.member2_role">Program Coordinator</p>
+                <p class="text-gray-600 text-sm" data-i18n="team.member2_desc">
+                    Coordinating programs and supporting youth-driven conservation projects across Rwanda.
+                </p>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="bg-white rounded-xl p-6 shadow-lg card-hover" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center mb-4">
+                    <i data-lucide="user" class="w-8 h-8 text-gray-500"></i>
+                </div>
+                <h3 class="font-bold text-lg text-gray-800" data-i18n="team.member3_name">Gad Dushimire</h3>
+                <p class="text-sm text-earthGreen mb-3" data-i18n="team.member3_role">Volunteer / GIS Specialist</p>
+                <p class="text-gray-600 text-sm" data-i18n="team.member3_desc">
+                    Mapping conservation areas and supporting environmental research initiatives.
+                </p>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="bg-white rounded-xl p-6 shadow-lg card-hover" data-aos="fade-up" data-aos-delay="250">
+                <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center mb-4">
+                    <i data-lucide="user" class="w-8 h-8 text-gray-500"></i>
+                </div>
+                <h3 class="font-bold text-lg text-gray-800" data-i18n="team.member4_name">Eric Nkurunziza</h3>
+                <p class="text-sm text-earthGreen mb-3" data-i18n="team.member4_role">Volunteer / Graphic Designer</p>
+                <p class="text-gray-600 text-sm" data-i18n="team.member4_desc">
+                    Creating visual materials that support conservation awareness and education.
+                </p>
+            </div>
+
+            <!-- Team Member 5 -->
+            <div class="bg-white rounded-xl p-6 shadow-lg card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center mb-4">
+                    <i data-lucide="users" class="w-8 h-8 text-gray-500"></i>
+                </div>
+                <h3 class="font-bold text-lg text-gray-800" data-i18n="team.member5_name">Team Chimpanzee Projects</h3>
+                <p class="text-sm text-earthGreen mb-3" data-i18n="team.member5_role">6 Teachers from 3 Schools with 7 Volunteers</p>
+                <p class="text-gray-600 text-sm" data-i18n="team.member5_desc">
+                    Supporting conservation activities and education focused on chimpanzee habitats in Rwanda.
+                </p>
+            </div>
+
+            <!-- Team Member 6 -->
+            <div class="bg-white rounded-xl p-6 shadow-lg card-hover" data-aos="fade-up" data-aos-delay="350">
+                <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center mb-4">
+                    <i data-lucide="users" class="w-8 h-8 text-gray-500"></i>
+                </div>
+                <h3 class="font-bold text-lg text-gray-800" data-i18n="team.member6_name">Team Evergreen</h3>
+                <p class="text-sm text-earthGreen mb-3" data-i18n="team.member6_role">20 Teachers & 26 Volunteers</p>
+                <p class="text-gray-600 text-sm" data-i18n="team.member6_desc">
+                    Engaging students and educators in tree-planting, agroforestry, and environmental protection.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- Partners Section -->
+    <section id="partners" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-earthGreen mb-4" data-i18n="partners.title">Our Partners</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto" data-i18n="partners.subtitle">
+                    Collaborating with organizations and institutions to amplify our impact
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center" data-aos="fade-up" data-aos-delay="100">
+                <!-- Partner Logos - Placeholder images -->
+                <div class="flex justify-center">
+                    <img src="assets/images/rdb.png" alt="Rwanda Development Board" class="h-12 partner-logo">
+                </div>
+                <div class="flex justify-center">
+                    <img src="assets/images/rema.png" alt="Rwanda Development Board" class="h-12 partner-logo">
+                </div>
+                <div class="flex justify-center">
+                    <img src="assets/images/rubis.png" alt="DP World" class="h-10 partner-logo">
+                </div>
+                <div class="flex justify-center">
+                    <img src="assets/images/biocoor.png" alt="Jane Goodall Institute" class="h-14 partner-logo">
+                </div>
+                <div class="flex justify-center">
+                    <img src="assets/images/wci.png" alt="Global Roots & Shoots" class="h-12 partner-logo">
+                </div>
+                <div class="flex justify-center">
+                    <img src="assets/images/dreamvillage.png" alt="UN Environment" class="h-10 partner-logo">
+                </div>
+                <div class="flex justify-center">
+                    <img src="assets/images/isaro.png" alt="Local School Partnerships" class="h-12 partner-logo">
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <p class="text-gray-600 mb-6" data-i18n="partners.cta_text">
+                    Interested in partnering with us?
+                </p>
+                <a href="contact.html#partnership" class="inline-flex items-center border border-earthGreen text-earthGreen px-8 py-3 rounded-full font-semibold hover:bg-earthGreen hover:text-white transition-all duration-300">
+                    <span data-i18n="partners.btn">Become a Partner</span>
+                    <i data-lucide="handshake" class="w-5 h-5 ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="join" class="py-20 bg-gradient-to-r from-earthGreen to-darkGreen text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6" data-i18n="cta.title">Join the Movement Today</h2>
+            <p class="text-xl text-gray-200 mb-10 max-w-2xl mx-auto" data-i18n="cta.subtitle">
+                Whether you donate, volunteer, or start a project, your action creates ripples of positive change.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#donate" class="bg-white text-earthGreen px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-2xl transform hover:scale-105" data-i18n="cta.btn_donate">
+                    <i data-lucide="heart" class="w-5 h-5 inline mr-2"></i>
+                    Donate Now
+                </a>
+                <a href="contact.html#volunteer" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all duration-300 shadow-2xl transform hover:scale-105" data-i18n="cta.btn_volunteer">
+                    <i data-lucide="users" class="w-5 h-5 inline mr-2"></i>
+                    Become a Volunteer
+                </a>
+            </div>
+            <p class="mt-10 text-gray-300" data-i18n="cta.footer_text">
+                "Together we can, together we will, we must change the world!" - Roots & Shoots Greeting
+            </p>
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section id="donate" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-lightBeige to-white rounded-2xl shadow-2xl overflow-hidden" data-aos="fade-up">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-earthGreen p-8 md:p-12 text-white">
+                        <h3 class="text-2xl font-bold mb-4" data-i18n="donate.title">Support Our Work</h3>
+                        <p class="mb-6" data-i18n="donate.desc">
+                            Your donation directly fuels youth-led environmental action, conservation efforts, and community projects across Rwanda.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 mr-3 flex-shrink-0"></i>
+                                <span data-i18n="donate.benefit1">Fund tree planting and habitat restoration</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 mr-3 flex-shrink-0"></i>
+                                <span data-i18n="donate.benefit2">Support environmental education in schools</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 mr-3 flex-shrink-0"></i>
+                                <span data-i18n="donate.benefit3">Empower youth leadership and action</span>
+                            </li>
+                        </ul>
+                        <div class="flex items-center text-sm">
+                            <i data-lucide="shield" class="w-5 h-5 mr-2"></i>
+                            <span data-i18n="donate.security">Secure donation • Tax-deductible</span>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h4 class="text-xl font-bold text-earthGreen mb-6" data-i18n="donate.form_title">Make a Donation</h4>
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2" data-i18n="donate.amount">Donation Amount</label>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                    <button type="button" class="py-3 rounded-lg border border-earthGreen text-earthGreen hover:bg-earthGreen hover:text-white transition">$25</button>
+                                    <button type="button" class="py-3 rounded-lg border border-earthGreen text-earthGreen hover:bg-earthGreen hover:text-white transition">$50</button>
+                                    <button type="button" class="py-3 rounded-lg border border-earthGreen text-earthGreen hover:bg-earthGreen hover:text-white transition">$100</button>
+                                    <button type="button" class="py-3 rounded-lg border border-earthGreen text-earthGreen hover:bg-earthGreen hover:text-white transition">$250</button>
+                                </div>
+                                <div class="mt-3">
+                                    <input type="number" placeholder="Custom Amount" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-earthGreen">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2" data-i18n="donate.frequency">Frequency</label>
+                                <div class="flex gap-4">
+                                    <label class="flex items-center">
+                                        <input type="radio" name="frequency" value="one-time" checked class="mr-2">
+                                        <span data-i18n="donate.one_time">One-time</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="frequency" value="monthly" class="mr-2">
+                                        <span data-i18n="donate.monthly">Monthly</span>
+                                    </label>
+                                </div>
+                            </div>
+                           <a href="donate.html"><button type="button"  class="w-full bg-earthGreen text-white font-bold py-4 rounded-lg hover:bg-darkGreen transition shadow-lg" data-i18n="donate.btn_donate">Donate Now</button></a> 
+                            <p class="text-xs text-gray-500 text-center" data-i18n="donate.secure_note">Your donation is secure and encrypted</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <a href="#" class="flex items-center gap-2 mb-6">
+                        <img src="assets/images/rs-logo.jpg" alt="Roots & Shoots Rwanda Logo" class="h-10 w-auto rounded">
+                        <span class="text-lg font-semibold text-white" data-i18n="footer.brand">Roots & Shoots Rwanda</span>
+                    </a>
+                    <p class="text-sm mb-6" data-i18n="footer.mission">
+                        Empowering youth to make a difference for animals, people, and the environment.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/rootsandshoots.rw" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition" aria-label="Instagram">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://x.com/RwandaRoots?t=lo30QHg_KJs0J-IpkAV7Ug&s=08" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition" aria-label="Twitter">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition" aria-label="Facebook">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition" aria-label="YouTube">
+                            <i data-lucide="youtube" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6" data-i18n="footer.links.title">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="about.html" class="hover:text-white transition" data-i18n="nav.about">About Us</a></li>
+                        <li><a href="projects.html" class="hover:text-white transition" data-i18n="nav.programs">Our Programs</a></li>
+                        <li><a href="impact.html" class="hover:text-white transition" data-i18n="nav.impact">Our Impact</a></li>
+                        <li><a href="stories.html" class="hover:text-white transition" data-i18n="nav.stories">Success Stories</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition" data-i18n="nav.contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Get Involved -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6" data-i18n="footer.involved.title">Get Involved</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#donate" class="hover:text-white transition" data-i18n="footer.involved.donate">Donate</a></li>
+                        <li><a href="contact.html#volunteer" class="hover:text-white transition" data-i18n="footer.involved.volunteer">Volunteer</a></li>
+                        <li><a href="contact.html#partnership" class="hover:text-white transition" data-i18n="footer.involved.partner">Partner With Us</a></li>
+                        <li><a href="contact.html#start-club" class="hover:text-white transition" data-i18n="footer.involved.start_club">Start a Club</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6" data-i18n="footer.contact.title">Contact Info</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-5 h-5 mr-3 text-gray-400 flex-shrink-0"></i>
+                            <span data-i18n="footer.contact.address">Remera, Gasabo District, Kigali, Rwanda</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="mail" class="w-5 h-5 mr-3 text-gray-400 flex-shrink-0"></i>
+                            <span>info@rootsandshoots.rw</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="phone" class="w-5 h-5 mr-3 text-gray-400 flex-shrink-0"></i>
+                            <span>+250 788 451 473</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-700 text-center text-sm">
+                <p>&copy; <span id="current-year">2024</span> <span data-i18n="footer.brand">Roots & Shoots Rwanda</span>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+                <p class="mt-2 text-gray-500" data-i18n="footer.disclaimer">
+                    Part of the Jane Goodall Institute's global Roots & Shoots program.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Tree Button -->
+    <a href="https://ecoforest.green/impacts/roots-and-shoots" target="_blank" rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 z-40 bg-earthGreen text-white p-4 rounded-full shadow-2xl hover:bg-darkGreen transition-all duration-300 floating-tree" 
+       aria-label="Visit Global Roots & Shoots">
+        <i data-lucide="tree-pine" class="w-6 h-6"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize libraries
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100,
+                easing: 'ease-out-cubic'
+            });
+            
+            // 2. Initialize Lucide Icons
+            lucide.createIcons();
+            
+            // 3. Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+
+        // 4. Mobile Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let menuOpen = false;
+        
+        menuBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+                mobileMenu.classList.remove('max-h-0');
+                mobileMenu.classList.add('max-h-screen');
+                menuBtn.setAttribute('aria-expanded', 'true');
+                menuBtn.innerHTML = '<i data-lucide="x" class="w-8 h-8"></i>';
+                lucide.createIcons();
+            } else {
+                mobileMenu.classList.remove('max-h-screen');
+                mobileMenu.classList.add('max-h-0');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                menuBtn.innerHTML = '<i data-lucide="menu" class="w-8 h-8"></i>';
+                lucide.createIcons();
+            }
+        });
+
+        // 5. Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.remove('navbar-transparent');
+                navbar.classList.add('navbar-solid');
+                // Update text colors in navbar
+                const navLinks = document.querySelectorAll('nav a');
+                navLinks.forEach(link => {
+                    link.classList.remove('text-white');
+                    link.classList.add('text-gray-800');
+                });
+                // Update brand text color
+                const brandText = document.querySelector('header span.text-white');
+                if (brandText) {
+                    brandText.classList.remove('text-white');
+                    brandText.classList.add('text-gray-800');
+                }
+            } else {
+                navbar.classList.remove('navbar-solid');
+                navbar.classList.add('navbar-transparent');
+                // Update text colors in navbar
+                const navLinks = document.querySelectorAll('nav a');
+                navLinks.forEach(link => {
+                    link.classList.remove('text-gray-800');
+                    link.classList.add('text-white');
+                });
+                // Update brand text color
+                const brandText = document.querySelector('header span.text-gray-800');
+                if (brandText) {
+                    brandText.classList.remove('text-gray-800');
+                    brandText.classList.add('text-white');
+                }
+            }
+        });
+
+        // 6. Impact Counters Logic
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText.replace(/,/g, '');
+                    const inc = target / speed;
+                    
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc).toLocaleString();
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target.toLocaleString();
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        // Trigger animation when section is in view
+        let hasAnimated = false;
+        const observer = new IntersectionObserver((entries) => {
+            if(entries[0].isIntersecting && !hasAnimated){
+                animateCounters();
+                hasAnimated = true;
+            }
+        }, { threshold: 0.5 });
+        
+        const impactSection = document.getElementById('impact');
+        if (impactSection) {
+            observer.observe(impactSection);
+        }
+
+        // 7. Translations (i18next)
+        const resources = {
+            en: {
+                translation: {
+                    // Navbar
+                    nav: {
+                        
+                        home: "Home",
+                        about: "About",
+                        programs: "Projects",
+                        impact: "Impact",
+                        stories: "Stories",
+                        contact: "Contact",
+                        donate: "Donate",
+                        cta: "Join Movement"
+                    },
+                    // Hero
+                    hero: {
+                        title: "Empowering Rwanda's Next Generation of Changemakers",
+                        subtitle: "Inspired by Dr. Jane Goodall, we mobilize youth to create sustainable change for people, animals, and the environment.",
+                        btn_explore: "Explore Our Programs",
+                        btn_donate: "Donate Now"
+                    },
+                    // Overview
+                    overview: {
+                        title: "Our Guiding Principles",
+                        subtitle: "Rooted in compassion and driven by action, we follow a holistic approach to creating positive change",
+                        mission_title: "Our Mission",
+                        mission_desc: "To foster respect and compassion for all living things and inspire action to make the world better.",
+                        vision_title: "Our Vision",
+                        vision_desc: "A global community of youth empowered to lead and influence change for a better world.",
+                        values_title: "Our Values",
+                        values_desc: "Compassion, respect, sustainability, and youth empowerment guide everything we do.",
+                        help_title: "Who We Help",
+                        help_desc: "Youth, communities, and the environment through education, conservation, and empowerment.",
+                        btn_learn: "Learn more"
+                    },
+                    // Programs
+                    programs: {
+                        title: "Our Programs",
+                        subtitle: "From local initiatives to global impact, our programs empower youth to create sustainable change",
+                        card1_title: "Enhancing Eastern Chimpanzee Habitat in Gishwati",
+                        card1_desc: "Restoring biodiversity in the Gishwati-Mukura landscape through tree planting and conservation education.",
+                        card2_title: "Evergreen Projects",
+                        card2_desc: "Integrating environmental education into school curriculums to build eco-conscious future leaders.",
+                        card3_title: "Community Action",
+                        card3_desc: "Youth-led initiatives tackling plastic waste and promoting sustainable practices in urban areas.",
+                        btn_view: "View Project",
+                        btn_all: "View All Projects"
+                    },
+                    // Impact
+                    impact: {
+                        title: "Our Impact in Numbers",
+                        subtitle: "Measurable change driven by youth action across Rwanda",
+                        trees: "Trees Planted",
+                        schools: "Schools Engaged",
+                        youth: "Youth Reached",
+                        projects: "Active Projects",
+                        btn: "View Full Impact Dashboard"
+                    },
+                    // Stories
+                    stories: {
+                        title: "Inspiring Stories",
+                        subtitle: "Hear from the youth and communities making a difference across Rwanda",
+                        story1_name: "Eric N.",
+                        story1_role: "Student & Volunteer",
+                        story1_quote: "\"Roots & Shoots taught me that even as a student, I can make a real difference. Our school garden project now feeds 50 families.\"",
+                        story1_location: "Kigali, Rwanda",
+                        story2_name: "Providence T.",
+                        story2_role: "Program Coordinator",
+                        story2_quote: "\"Seeing youth transform from passive observers to active changemakers is the most rewarding part of my work.\"",
+                        story2_location: "Gishwati, Rwanda",
+                        story3_name: "Community Leader",
+                        story3_role: "Gishwati Community",
+                        story3_quote: "\"The reforestation project has brought back birds and cleaner water to our community. Our children have hope for a greener future.\"",
+                        story3_location: "Gishwati-Mukura",
+                        btn_all: "Read More Stories"
+                    },
+                    // Partners
+                    partners: {
+                        title: "Our Partners",
+                        subtitle: "Collaborating with organizations and institutions to amplify our impact",
+                        cta_text: "Interested in partnering with us?",
+                        btn: "Become a Partner"
+                    },
+                    // CTA
+                    cta: {
+                        title: "Join the Movement Today",
+                        subtitle: "Whether you donate, volunteer, or start a project, your action creates ripples of positive change.",
+                        btn_donate: "Donate Now",
+                        btn_volunteer: "Become a Volunteer",
+                        footer_text: "\"Together we can, together we will, we must change the world!\" - Roots & Shoots Greeting"
+                    },
+                    // Donate
+                    donate: {
+                        title: "Support Our Work",
+                        desc: "Your donation directly fuels youth-led environmental action, conservation efforts, and community projects across Rwanda.",
+                        benefit1: "Fund tree planting and habitat restoration",
+                        benefit2: "Support environmental education in schools",
+                        benefit3: "Empower youth leadership and action",
+                        security: "Secure donation • Tax-deductible",
+                        form_title: "Make a Donation",
+                        amount: "Donation Amount",
+                        frequency: "Frequency",
+                        one_time: "One-time",
+                        monthly: "Monthly",
+                        btn_donate: "Donate Now",
+                        secure_note: "Your donation is secure and encrypted"
+                    },
+                    // Footer
+                    footer: {
+                        brand: "Roots & Shoots Rwanda",
+                        mission: "Empowering youth to make a difference for animals, people, and the environment.",
+                        links: { title: "Quick Links" },
+                        involved: {
+                            title: "Get Involved",
+                            donate: "Donate",
+                            volunteer: "Volunteer",
+                            partner: "Partner With Us",
+                            start_club: "Start a Club"
+                        },
+                        contact: {
+                            title: "Contact Info",
+                            address: "Remera, Gasabo District, Kigali, Rwanda"
+                        },
+                        rights: "All rights reserved.",
+                        disclaimer: "Part of the Jane Goodall Institute's global Roots & Shoots program."
+                    }
+                }
+            },
+            fr: {
+                translation: {
+                    // French translations (abbreviated for example)
+                    nav: {
+                        
+                        home: "Accueil",
+                        about: "ÀPropos",
+                        programs: "Programmes",
+                        impact: "Impact",
+                        stories: "Témoignages",
+                        contact: "Contact",
+                        donate: "Faire un don",
+                        cta: "Rejoindre"
+                    },
+                    hero: {
+                        title: "Autonomiser la prochaine génération de leaders du changement au Rwanda",
+                        subtitle: "Inspirés par le Dr Jane Goodall, nous mobilisons les jeunes pour créer un changement durable pour les personnes, les animaux et l'environnement.",
+                        btn_explore: "Explorer nos programmes",
+                        btn_donate: "Faire un don"
+                    }
+                    // Additional French translations would follow the same pattern
+                }
+            },
+            rw: {
+                translation: {
+                    // Kinyarwanda translations (abbreviated for example)
+                    nav: {
+                        
+                        home: "Ahabanza",
+                        about: "Tumenye",
+                        programs: "Porogaramu",
+                        impact: "Ingaruka",
+                        stories: "Inkuru",
+                        contact: "Twandikire",
+                        donate: "Tanga",
+                        cta: "Iyandikishe"
+                    },
+                    hero: {
+                        title: "Gushoboza urubyiruko rw'u Rwanda kubaka ejo hazaza heza",
+                        subtitle: "Dushingiye ku cyerekezo cya Dr. Jane Goodall, dushishikariza urubyiruko kubaka igihano cyiza ku bantu, inyamaswa n'ibidukikije.",
+                        btn_explore: "Reba porogaramu zacu",
+                        btn_donate: "Tanga nonaha"
+                    }
+                    // Additional Kinyarwanda translations would follow the same pattern
+                }
+            }
+        };
+
+        // Initialize i18next
+        i18next.init({
+            lng: 'en',
+            debug: false,
+            resources: resources
+        }, function(err, t) {
+            updateContent();
+        });
+
+        // Language switching function
+        function changeLang(lang) {
+            i18next.changeLanguage(lang, () => {
+                updateContent();
+            });
+        }
+
+        // Update content with translations
+        function updateContent() {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                // Handle nested keys (e.g., "nav.home")
+                const keys = key.split('.');
+                let translation = i18next.t(key);
+                
+                // Only update if we have a valid translation
+                if (translation !== key) {
+                    // Check if element is an input placeholder or button text
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = translation;
+                    } else {
+                        element.textContent = translation;
+                    }
+                }
+            });
+        }
+
+        // 8. Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (menuOpen) {
+                        menuBtn.click();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

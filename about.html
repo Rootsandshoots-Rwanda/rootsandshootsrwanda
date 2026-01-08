@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.title">About Roots & Shoots Rwanda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #2E7D32;
+            --secondary-green: #4CAF50;
+            --accent-gold: #FFC107;
+            --dark-text: #1E3A1E;
+            --light-text: #5A6C5A;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        
+        .section-padding {
+            padding: 5rem 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 6rem 2rem;
+            }
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .language-switcher button.active {
+            background-color: var(--primary-green);
+            color: white;
+        }
+        
+        .nav-link.active {
+            color: var(--primary-green);
+            border-bottom: 2px solid var(--primary-green);
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+        
+        .impact-bg {
+            background: linear-gradient(rgba(46, 125, 50, 0.9), rgba(76, 175, 80, 0.8)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+        
+        .cta-bg {
+            background: linear-gradient(rgba(30, 58, 30, 0.9), rgba(46, 125, 50, 0.9)), url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-r from-green-600 to-green-400 flex items-center justify-center">
+                        <i class="fas fa-seedling text-white text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-green-800" data-i18n="header.title">Roots & Shoots Rwanda</h1>
+                        <p class="text-xs text-gray-600" data-i18n="header.subtitle">Jane Goodall Institute</p>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="flex flex-wrap justify-center space-x-1 md:space-x-6">
+                    <a href="#" class="nav-link px-3 py-2 text-gray-700 hover:text-green-700 transition" data-i18n="nav.home">Home</a>
+                    <a href="#" class="nav-link active px-3 py-2 text-green-700 font-medium transition" data-i18n="nav.about">About</a>
+                    <a href="#" class="nav-link px-3 py-2 text-gray-700 hover:text-green-700 transition" data-i18n="nav.impact">Impact</a>
+                    <a href="#" class="nav-link px-3 py-2 text-gray-700 hover:text-green-700 transition" data-i18n="nav.news">News</a>
+                    <a href="#" class="nav-link px-3 py-2 text-gray-700 hover:text-green-700 transition" data-i18n="nav.getinvolved">Get Involved</a>
+                    <a href="#" class="nav-link px-3 py-2 text-gray-700 hover:text-green-700 transition" data-i18n="nav.contact">Contact</a>
+                </nav>
+                
+                <!-- Language Switcher -->
+                <div class="language-switcher flex mt-4 md:mt-0 space-x-2">
+                    <button class="lang-btn px-3 py-1 rounded-md border border-green-700 text-green-700 text-sm active" data-lang="en">EN</button>
+                    <button class="lang-btn px-3 py-1 rounded-md border border-green-700 text-green-700 text-sm" data-lang="fr">FR</button>
+                    <button class="lang-btn px-3 py-1 rounded-md border border-green-700 text-green-700 text-sm" data-lang="rw">RW</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg text-white">
+            <div class="section-padding">
+                <div class="container mx-auto max-w-4xl text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="about.hero.title">About Roots & Shoots Rwanda</h1>
+                    <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto" data-i18n="about.hero.subtitle">Empowering Rwandan youth to create positive change for people, animals, and the environment through community-led projects.</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="#" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105" data-i18n="about.hero.cta.impact">Explore Our Impact</a>
+                        <a href="#" class="bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105" data-i18n="about.hero.cta.donate">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What is Roots & Shoots? -->
+        <section class="bg-gray-50">
+            <div class="section-padding">
+                <div class="container mx-auto max-w-6xl">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-800" data-i18n="about.whatis.title">What Is Roots & Shoots?</h2>
+                        <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-10 items-center">
+                        <div>
+                            <p class="text-lg mb-6" data-i18n="about.whatis.description">Roots & Shoots is a global youth-led community action program founded by Dr. Jane Goodall. It empowers young people to become compassionate leaders and create positive change in their communities.</p>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="bg-green-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-users text-green-700 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg mb-1" data-i18n="about.whatis.people.title">People</h3>
+                                        <p data-i18n="about.whatis.people.description">Improving lives and fostering understanding in our communities</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-green-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-paw text-green-700 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg mb-1" data-i18n="about.whatis.animals.title">Animals</h3>
+                                        <p data-i18n="about.whatis.animals.description">Protecting wildlife and promoting animal welfare</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-green-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-leaf text-green-700 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg mb-1" data-i18n="about.whatis.environment.title">Environment</h3>
+                                        <p data-i18n="about.whatis.environment.description">Conserving and restoring our shared natural world</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                            <div class="text-center p-6">
+                                <div class="text-green-700 text-5xl mb-4">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4" data-i18n="about.whatis.philosophy.title">Compassion → Action → Change</h3>
+                                <p class="text-lg" data-i18n="about.whatis.philosophy.description">Our philosophy is simple yet powerful: compassion inspires action, and collective action creates meaningful change in our world.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission, Vision, Goal -->
+        <section class="bg-white">
+            <div class="section-padding">
+                <div class="container mx-auto max-w-6xl">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-800" data-i18n="about.mvg.title">Our Mission, Vision & Goal</h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="about.mvg.subtitle">Guiding principles that drive our work in Rwanda</p>
+                        <div class="w-24 h-1 bg-green-600 mx-auto mt-4"></div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Mission Card -->
+                        <div class="bg-gradient-to-b from-green-50 to-white p-8 rounded-xl shadow-md card-hover border border-green-100">
+                            <div class="text-green-700 text-4xl mb-6 text-center">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-center" data-i18n="about.mission.title">Mission</h3>
+                            <p class="text-lg text-center" data-i18n="about.mission.description">To empower Rwandan youth with knowledge, tools, and inspiration to become compassionate leaders creating sustainable change for people, animals, and the environment.</p>
+                        </div>
+                        
+                        <!-- Vision Card -->
+                        <div class="bg-gradient-to-b from-green-50 to-white p-8 rounded-xl shadow-md card-hover border border-green-100">
+                            <div class="text-green-700 text-4xl mb-6 text-center">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-center" data-i18n="about.vision.title">Vision</h3>
+                            <p class="text-lg text-center" data-i18n="about.vision.description">A Rwanda where young people are actively engaged in building sustainable communities that live in harmony with nature and each other.</p>
+                        </div>
+                        
+                        <!-- Goal Card -->
+                        <div class="bg-gradient-to-b from-green-50 to-white p-8 rounded-xl shadow-md card-hover border border-green-100">
+                            <div class="text-green-700 text-4xl mb-6 text-center">
+                                <i class="fas fa-flag-checkered"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-center" data-i18n="about.goal.title">Goal</h3>
+                            <p class="text-lg text-center" data-i18n="about.goal.description">To establish Roots & Shoots clubs in every district of Rwanda, engaging 50,000 young people in community action projects by 2030.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Dr. Jane Goodall -->
+        <section class="bg-gray-50">
+            <div class="section-padding">
+                <div class="container mx-auto max-w-6xl">
+                    <div class="grid md:grid-cols-2 gap-10 items-center">
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1583339522870-0d9f28cef33f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Dr. Jane Goodall" class="rounded-xl shadow-lg w-full">
+                        </div>
+                        
+                        <div>
+                            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-green-800" data-i18n="about.jane.title">About Dr. Jane Goodall</h2>
+                            <p class="text-lg mb-6" data-i18n="about.jane.description">Dr. Jane Goodall, DBE, founder of the Jane Goodall Institute and UN Messenger of Peace, is a world-renowned ethologist and conservationist inspiring greater understanding and protection of all life on Earth.</p>
+                            <p class="text-lg mb-6" data-i18n="about.jane.roots">In 1991, Dr. Goodall founded Roots & Shoots with a group of Tanzanian students. The program began with the goal of bringing together youth from preschool to university age to work on environmental, conservation, and humanitarian issues.</p>
+                            <div class="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg">
+                                <p class="text-lg italic" data-i18n="about.jane.quote">"Young people, when informed and empowered, when they realize that what they do truly makes a difference, can change the world."</p>
+                                <p class="font-bold mt-4" data-i18n="about.jane.quote_author">- Dr. Jane Goodall</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roots & Shoots Rwanda Story -->
+        <section class="bg-white">
+            <div class="section-padding">
+                <div class="container mx-auto max-w-6xl">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-800" data-i18n="about.rwanda.title">Roots & Shoots Rwanda Story</h2>
+                        <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-10">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-6" data-i18n="about.rwanda.how.title">How Roots & Shoots Came to Rwanda</h3>
+                            <p class="text-lg mb-6" data-i18n="about.rwanda.how.description">Roots & Shoots was introduced to Rwanda in 2008 by a group of inspired educators and environmentalists who believed in Dr. Goodall's vision of youth-led change.</p>
+                            <p class="text-lg mb-6" data-i18n="about.rwanda.how.growth">Starting with just three schools in Kigali, the movement quickly spread across the country as young Rwandans embraced the opportunity to address local challenges through community action projects.</p>
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                    <span data-i18n="about.rwanda.how.list.1">Officially registered with the Rwanda Governance Board in 2010</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                    <span data-i18n="about.rwanda.how.list.2">Recognized by the Ministry of Education for youth empowerment</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                    <span data-i18n="about.rwanda.how.list.3">Partnered with 200+ schools and communities nationwide</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-green-50 p-8 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-6" data-i18n="about.rwanda.founding.title">Our Founding Story</h3>
+                            <p class="text-lg mb-6" data-i18n="about.rwanda.founding.description">Roots & Shoots Rwanda was founded by a coalition of educators, conservationists, and youth leaders who witnessed the transformative power of Dr. Goodall's approach during visits to neighboring Tanzania.</p>
+                            <p class="text-lg mb-6" data-i18n="about.rwanda.founding.volunteer">From the beginning, our organization has been volunteer-driven, with passionate individuals dedicating their time to mentor youth and facilitate community projects.</p>
+                            <div class="flex items-center mt-8">
+                                <div class="w-16 h-16 rounded-full bg-green-200 flex items-center justify-center mr-4">
+                                    <i class="fas fa-hands-helping text-green-700 text-2xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold" data-i18n="about.rwanda.founding.growth_title">Volunteer-Driven Growth</p>
+                                    <p class="text-gray-600" data-i18n="about.rwanda.founding.growth_description">100% of our expansion has been fueled by dedicated volunteers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Impact Preview -->
+        <section class="impact-bg text-white">
+            <div class="section-padding">
+                <div class="container mx-auto max-w-6xl">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="about.impact.title">Our Impact in Rwanda</h2>
+                        <p class="text-xl max-w-3xl mx-auto" data-i18n="about.impact.subtitle">Creating measurable change through youth-led community projects</p>
+                        <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-8 mb-12">
+                        <div class="text-center bg-white/10 backdrop-blur-sm p-8 rounded-xl">
+                            <div class="text-5xl font-bold text-amber-300 mb-4">250+</div>
+                            <h3 class="text-xl font-bold mb-2" data-i18n="about.impact.trees.title">Trees Planted</h3>
+                            <p data-i18n="about.impact.trees.description">Native species reforestation projects</p>
+                        </div>
+                        
+                        <div class="text-center bg-white/10 backdrop-blur-sm p-8 rounded-xl">
+                            <div class="text-5xl font-bold text-amber-300 mb-4">120</div>
+                            <h3 class="text-xl font-bold mb-2" data-i18n="about.impact.clubs.title">Clubs Formed</h3>
+                            <p data-i18n="about.impact.clubs.description">Active youth groups across Rwanda</p>
+                        </div>
+                        
+                        <div class="text-center bg-white/10 backdrop-blur-sm p-8 rounded-xl">
+                            <div class="text-5xl font-bold text-amber-300 mb-4">5,000+</div>
+                            <h3 class="text-xl font-bold mb-2" data-i18n="about.impact.youth.title">Youth Engaged</h3>
+                            <p data-i18n="about.impact.youth.description">Young people taking action in communities</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <a href="#" class="inline-block bg-white text-green-800 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105" data-i18n="about.impact.cta">View Full Impact Report</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News & Stories Preview -->
+        <section class="bg-gray-50">
+            <div class="section-padding">
+                <div class="container mx-auto max-w-6xl">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-800" data-i18n="about.news.title">Latest News & Stories</h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="about.news.subtitle">Inspiring stories of change from across Rwanda</p>
+                        <div class="w-24 h-1 bg-green-600 mx-auto mt-4"></div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-8 mb-12">
+                        <!-- News Preview 1 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                            <div class="h-48 bg-gradient-to-r from-green-500 to-green-700"></div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-3" data-i18n="about.news.1.title">Youth Climate Summit 2023</h3>
+                                <p class="text-gray-600 mb-4" data-i18n="about.news.1.excerpt">Rwandan youth presented innovative solutions to climate challenges at our annual summit in Kigali...</p>
+                                <a href="#" class="text-green-700 font-semibold hover:text-green-800 transition" data-i18n="about.news.readmore">Read More →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- News Preview 2 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                            <div class="h-48 bg-gradient-to-r from-amber-500 to-amber-700"></div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-3" data-i18n="about.news.2.title">Women in Conservation</h3>
+                                <p class="text-gray-600 mb-4" data-i18n="about.news.2.excerpt">How young Rwandan women are leading environmental protection initiatives in their communities...</p>
+                                <a href="#" class="text-green-700 font-semibold hover:text-green-800 transition" data-i18n="about.news.readmore">Read More →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- News Preview 3 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                            <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-700"></div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-3" data-i18n="about.news.3.title">Urban Gardening Success</h3>
+                                <p class="text-gray-600 mb-4" data-i18n="about.news.3.excerpt">Kigali students transform school grounds into productive gardens, feeding families and teaching sustainability...</p>
+                                <a href="#" class="text-green-700 font-semibold hover:text-green-800 transition" data-i18n="about.news.readmore">Read More →</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="#" class="bg-green-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-lg transition text-center" data-i18n="about.news.cta.all">View All News</a>
+                        <a href="#" class="bg-white border border-green-700 text-green-700 hover:bg-green-50 font-semibold py-3 px-8 rounded-lg transition text-center" data-i18n="about.news.cta.stories">Read More Stories</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-bg text-white">
+            <div class="section-padding">
+                <div class="container mx-auto max-w-4xl text-center">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-8" data-i18n="about.cta.title">Together We Can Change The World</h2>
+                    <p class="text-xl md:text-2xl mb-12 italic" data-i18n="about.cta.message">"Together we can, together we will, we must change the world."</p>
+                    
+                    <div class="flex flex-col sm:flex-row justify-center gap-6">
+                        <a href="#" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-10 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-lg" data-i18n="about.cta.donate">Donate Now</a>
+                        <a href="#" class="bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold py-4 px-10 rounded-lg text-lg transition duration-300 transform hover:scale-105" data-i18n="about.cta.contact">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-green-600 to-green-400 flex items-center justify-center">
+                            <i class="fas fa-seedling text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Roots & Shoots Rwanda</h3>
+                            <p class="text-sm text-green-200">Jane Goodall Institute</p>
+                        </div>
+                    </div>
+                    <p class="text-green-200" data-i18n="footer.description">Empowering Rwandan youth to create positive change for people, animals, and the environment.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6" data-i18n="footer.links.title">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-green-200 hover:text-white transition" data-i18n="footer.links.home">Home</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition" data-i18n="footer.links.about">About Us</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition" data-i18n="footer.links.programs">Our Programs</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition" data-i18n="footer.links.getinvolved">Get Involved</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6" data-i18n="footer.contact.title">Contact Us</h4>
+                    <ul class="space-y-3 text-green-200">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span data-i18n="footer.contact.address">Kigali, Rwanda</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3"></i>
+                            <span>info@rootsandshootsrwanda.org</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-3"></i>
+                            <span data-i18n="footer.contact.phone">+250 788 123 456</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6" data-i18n="footer.follow.title">Follow Us</h4>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="#" class="w-10 h-10 rounded-full bg-green-800 flex items-center justify-center hover:bg-green-700 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-green-800 flex items-center justify-center hover:bg-green-700 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-green-800 flex items-center justify-center hover:bg-green-700 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-green-800 flex items-center justify-center hover:bg-green-700 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <p class="text-sm text-green-200" data-i18n="footer.copyright">© 2023 Roots & Shoots Rwanda. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Internationalization Script -->
+    <script>
+        // Internationalization data
+        const i18n = {
+            en: {
+                // Page Title
+                "page.title": "About Roots & Shoots Rwanda",
+                
+                // Header
+                "header.title": "Roots & Shoots Rwanda",
+                "header.subtitle": "Jane Goodall Institute",
+                
+                // Navigation
+                "nav.home": "Home",
+                "nav.about": "About",
+                "nav.impact": "Impact",
+                "nav.news": "News",
+                "nav.getinvolved": "Get Involved",
+                "nav.contact": "Contact",
+                
+                // Hero Section
+                "about.hero.title": "About Roots & Shoots Rwanda",
+                "about.hero.subtitle": "Empowering Rwandan youth to create positive change for people, animals, and the environment through community-led projects.",
+                "about.hero.cta.impact": "Explore Our Impact",
+                "about.hero.cta.donate": "Donate Now",
+                
+                // What is Roots & Shoots?
+                "about.whatis.title": "What Is Roots & Shoots?",
+                "about.whatis.description": "Roots & Shoots is a global youth-led community action program founded by Dr. Jane Goodall. It empowers young people to become compassionate leaders and create positive change in their communities.",
+                "about.whatis.people.title": "People",
+                "about.whatis.people.description": "Improving lives and fostering understanding in our communities",
+                "about.whatis.animals.title": "Animals",
+                "about.whatis.animals.description": "Protecting wildlife and promoting animal welfare",
+                "about.whatis.environment.title": "Environment",
+                "about.whatis.environment.description": "Conserving and restoring our shared natural world",
+                "about.whatis.philosophy.title": "Compassion → Action → Change",
+                "about.whatis.philosophy.description": "Our philosophy is simple yet powerful: compassion inspires action, and collective action creates meaningful change in our world.",
+                
+                // Mission, Vision, Goal
+                "about.mvg.title": "Our Mission, Vision & Goal",
+                "about.mvg.subtitle": "Guiding principles that drive our work in Rwanda",
+                "about.mission.title": "Mission",
+                "about.mission.description": "To empower Rwandan youth with knowledge, tools, and inspiration to become compassionate leaders creating sustainable change for people, animals, and the environment.",
+                "about.vision.title": "Vision",
+                "about.vision.description": "A Rwanda where young people are actively engaged in building sustainable communities that live in harmony with nature and each other.",
+                "about.goal.title": "Goal",
+                "about.goal.description": "To establish Roots & Shoots clubs in every district of Rwanda, engaging 50,000 young people in community action projects by 2030.",
+                
+                // About Dr. Jane Goodall
+                "about.jane.title": "About Dr. Jane Goodall",
+                "about.jane.description": "Dr. Jane Goodall, DBE, founder of the Jane Goodall Institute and UN Messenger of Peace, is a world-renowned ethologist and conservationist inspiring greater understanding and protection of all life on Earth.",
+                "about.jane.roots": "In 1991, Dr. Goodall founded Roots & Shoots with a group of Tanzanian students. The program began with the goal of bringing together youth from preschool to university age to work on environmental, conservation, and humanitarian issues.",
+                "about.jane.quote": "\"Young people, when informed and empowered, when they realize that what they do truly makes a difference, can change the world.\"",
+                "about.jane.quote_author": "- Dr. Jane Goodall",
+                
+                // Roots & Shoots Rwanda Story
+                "about.rwanda.title": "Roots & Shoots Rwanda Story",
+                "about.rwanda.how.title": "How Roots & Shoots Came to Rwanda",
+                "about.rwanda.how.description": "Roots & Shoots was introduced to Rwanda in 2008 by a group of inspired educators and environmentalists who believed in Dr. Goodall's vision of youth-led change.",
+                "about.rwanda.how.growth": "Starting with just three schools in Kigali, the movement quickly spread across the country as young Rwandans embraced the opportunity to address local challenges through community action projects.",
+                "about.rwanda.how.list.1": "Officially registered with the Rwanda Governance Board in 2010",
+                "about.rwanda.how.list.2": "Recognized by the Ministry of Education for youth empowerment",
+                "about.rwanda.how.list.3": "Partnered with 200+ schools and communities nationwide",
+                "about.rwanda.founding.title": "Our Founding Story",
+                "about.rwanda.founding.description": "Roots & Shoots Rwanda was founded by a coalition of educators, conservationists, and youth leaders who witnessed the transformative power of Dr. Goodall's approach during visits to neighboring Tanzania.",
+                "about.rwanda.founding.volunteer": "From the beginning, our organization has been volunteer-driven, with passionate individuals dedicating their time to mentor youth and facilitate community projects.",
+                "about.rwanda.founding.growth_title": "Volunteer-Driven Growth",
+                "about.rwanda.founding.growth_description": "100% of our expansion has been fueled by dedicated volunteers",
+                
+                // Impact Preview
+                "about.impact.title": "Our Impact in Rwanda",
+                "about.impact.subtitle": "Creating measurable change through youth-led community projects",
+                "about.impact.trees.title": "Trees Planted",
+                "about.impact.trees.description": "Native species reforestation projects",
+                "about.impact.clubs.title": "Clubs Formed",
+                "about.impact.clubs.description": "Active youth groups across Rwanda",
+                "about.impact.youth.title": "Youth Engaged",
+                "about.impact.youth.description": "Young people taking action in communities",
+                "about.impact.cta": "View Full Impact Report",
+                
+                // News & Stories Preview
+                "about.news.title": "Latest News & Stories",
+                "about.news.subtitle": "Inspiring stories of change from across Rwanda",
+                "about.news.1.title": "Youth Climate Summit 2023",
+                "about.news.1.excerpt": "Rwandan youth presented innovative solutions to climate challenges at our annual summit in Kigali...",
+                "about.news.2.title": "Women in Conservation",
+                "about.news.2.excerpt": "How young Rwandan women are leading environmental protection initiatives in their communities...",
+                "about.news.3.title": "Urban Gardening Success",
+                "about.news.3.excerpt": "Kigali students transform school grounds into productive gardens, feeding families and teaching sustainability...",
+                "about.news.readmore": "Read More →",
+                "about.news.cta.all": "View All News",
+                "about.news.cta.stories": "Read More Stories",
+                
+                // Call to Action
+                "about.cta.title": "Together We Can Change The World",
+                "about.cta.message": "\"Together we can, together we will, we must change the world.\"",
+                "about.cta.donate": "Donate Now",
+                "about.cta.contact": "Contact Us",
+                
+                // Footer
+                "footer.description": "Empowering Rwandan youth to create positive change for people, animals, and the environment.",
+                "footer.links.title": "Quick Links",
+                "footer.links.home": "Home",
+                "footer.links.about": "About Us",
+                "footer.links.programs": "Our Programs",
+                "footer.links.getinvolved": "Get Involved",
+                "footer.contact.title": "Contact Us",
+                "footer.contact.address": "Kigali, Rwanda",
+                "footer.contact.phone": "+250 788 123 456",
+                "footer.follow.title": "Follow Us",
+                "footer.copyright": "© 2023 Roots & Shoots Rwanda. All rights reserved."
+            },
+            fr: {
+                // Page Title
+                "page.title": "À propos de Roots & Shoots Rwanda",
+                
+                // Header
+                "header.title": "Roots & Shoots Rwanda",
+                "header.subtitle": "Institut Jane Goodall",
+                
+                // Navigation
+                "nav.home": "Accueil",
+                "nav.about": "À propos",
+                "nav.impact": "Impact",
+                "nav.news": "Actualités",
+                "nav.getinvolved": "S'impliquer",
+                "nav.contact": "Contact",
+                
+                // Hero Section
+                "about.hero.title": "À propos de Roots & Shoots Rwanda",
+                "about.hero.subtitle": "Autonomiser les jeunes Rwandais pour créer des changements positifs pour les personnes, les animaux et l'environnement grâce à des projets communautaires.",
+                "about.hero.cta.impact": "Explorer notre impact",
+                "about.hero.cta.donate": "Faire un don",
+                
+                // What is Roots & Shoots?
+                "about.whatis.title": "Qu'est-ce que Roots & Shoots?",
+                "about.whatis.description": "Roots & Shoots est un programme d'action communautaire mondial dirigé par des jeunes, fondé par le Dr Jane Goodall. Il permet aux jeunes de devenir des leaders compatissants et de créer des changements positifs dans leurs communautés.",
+                "about.whatis.people.title": "Personnes",
+                "about.whatis.people.description": "Améliorer les vies et favoriser la compréhension dans nos communautés",
+                "about.whatis.animals.title": "Animaux",
+                "about.whatis.animals.description": "Protéger la faune et promouvoir le bien-être animal",
+                "about.whatis.environment.title": "Environnement",
+                "about.whatis.environment.description": "Conserver et restaurer notre monde naturel partagé",
+                "about.whatis.philosophy.title": "Compassion → Action → Changement",
+                "about.whatis.philosophy.description": "Notre philosophie est simple mais puissante : la compassion inspire l'action, et l'action collective crée un changement significatif dans notre monde.",
+                
+                // Mission, Vision, Goal
+                "about.mvg.title": "Notre Mission, Vision & Objectif",
+                "about.mvg.subtitle": "Principes directeurs qui guident notre travail au Rwanda",
+                "about.mission.title": "Mission",
+                "about.mission.description": "Autonomiser les jeunes Rwandais avec des connaissances, des outils et de l'inspiration pour devenir des leaders compatissants créant un changement durable pour les personnes, les animaux et l'environnement.",
+                "about.vision.title": "Vision",
+                "about.vision.description": "Un Rwanda où les jeunes sont activement engagés dans la construction de communautés durables qui vivent en harmonie avec la nature et entre eux.",
+                "about.goal.title": "Objectif",
+                "about.goal.description": "Établir des clubs Roots & Shoots dans chaque district du Rwanda, engageant 50 000 jeunes dans des projets d'action communautaire d'ici 2030.",
+                
+                // About Dr. Jane Goodall
+                "about.jane.title": "À propos du Dr Jane Goodall",
+                "about.jane.description": "Le Dr Jane Goodall, DBE, fondatrice du Jane Goodall Institute et messagère de la paix des Nations Unies, est une éthologue et une conservationniste de renommée mondiale qui inspire une meilleure compréhension et protection de toute vie sur Terre.",
+                "about.jane.roots": "En 1991, le Dr Goodall a fondé Roots & Shoots avec un groupe d'étudiants tanzaniens. Le programme a commencé avec l'objectif de rassembler des jeunes de l'âge préscolaire à l'université pour travailler sur des questions environnementales, de conservation et humanitaires.",
+                "about.jane.quote": "\"Les jeunes, lorsqu'ils sont informés et autonomisés, lorsqu'ils réalisent que ce qu'ils fait vraiment fait une différence, peuvent changer le monde.\"",
+                "about.jane.quote_author": "- Dr. Jane Goodall",
+                
+                // Roots & Shoots Rwanda Story
+                "about.rwanda.title": "Histoire de Roots & Shoots Rwanda",
+                "about.rwanda.how.title": "Comment Roots & Shoots est arrivé au Rwanda",
+                "about.rwanda.how.description": "Roots & Shoots a été introduit au Rwanda en 2008 par un groupe d'éducateurs et d'environnementalistes inspirés qui croyaient en la vision du Dr Goodall du changement dirigé par les jeunes.",
+                "about.rwanda.how.growth": "Commencant avec seulement trois écoles à Kigali, le mouvement s'est rapidement propagé à travers le pays alors que les jeunes Rwandais ont saisi l'opportunité de relever les défis locaux grâce à des projets d'action communautaire.",
+                "about.rwanda.how.list.1": "Officiellement enregistré auprès du Rwanda Governance Board en 2010",
+                "about.rwanda.how.list.2": "Reconnu par le ministère de l'Éducation pour l'autonomisation des jeunes",
+                "about.rwanda.how.list.3": "Partenariat avec plus de 200 écoles et communautés à travers le pays",
+                "about.rwanda.founding.title": "Notre histoire fondatrice",
+                "about.rwanda.founding.description": "Roots & Shoots Rwanda a été fondé par une coalition d'éducateurs, de conservationnistes et de leaders jeunesse qui ont été témoins du pouvoir transformateur de l'approche du Dr Goodall lors de visites en Tanzanie voisine.",
+                "about.rwanda.founding.volunteer": "Dès le début, notre organisation a été dirigée par des bénévoles, avec des individus passionnés consacrant leur temps à encadrer les jeunes et à faciliter les projets communautaires.",
+                "about.rwanda.founding.growth_title": "Croissance axée sur le bénévolat",
+                "about.rwanda.founding.growth_description": "100% de notre expansion a été alimentée par des bénévoles dévoués",
+                
+                // Impact Preview
+                "about.impact.title": "Notre impact au Rwanda",
+                "about.impact.subtitle": "Créer un changement mesurable grâce à des projets communautaires dirigés par des jeunes",
+                "about.impact.trees.title": "Arbres plantés",
+                "about.impact.trees.description": "Projets de reboisement d'espèces indigènes",
+                "about.impact.clubs.title": "Clubs formés",
+                "about.impact.clubs.description": "Groupes de jeunes actifs à travers le Rwanda",
+                "about.impact.youth.title": "Jeunes engagés",
+                "about.impact.youth.description": "Jeunes prenant des actions dans les communautés",
+                "about.impact.cta": "Voir le rapport d'impact complet",
+                
+                // News & Stories Preview
+                "about.news.title": "Dernières nouvelles et histoires",
+                "about.news.subtitle": "Histoires inspirantes de changement à travers le Rwanda",
+                "about.news.1.title": "Sommet de la jeunesse pour le climat 2023",
+                "about.news.1.excerpt": "Les jeunes Rwandais ont présenté des solutions innovantes aux défis climatiques lors de notre sommet annuel à Kigali...",
+                "about.news.2.title": "Femmes dans la conservation",
+                "about.news.2.excerpt": "Comment les jeunes femmes rwandaises dirigent des initiatives de protection de l'environnement dans leurs communautés...",
+                "about.news.3.title": "Succès du jardinage urbain",
+                "about.news.3.excerpt": "Les étudiants de Kigali transforment les terrains scolaires en jardins productifs, nourrissant des familles et enseignant la durabilité...",
+                "about.news.readmore": "Lire la suite →",
+                "about.news.cta.all": "Voir toutes les actualités",
+                "about.news.cta.stories": "Lire plus d'histoires",
+                
+                // Call to Action
+                "about.cta.title": "Ensemble, nous pouvons changer le monde",
+                "about.cta.message": "\"Ensemble nous pouvons, ensemble nous allons, nous devons changer le monde.\"",
+                "about.cta.donate": "Faire un don maintenant",
+                "about.cta.contact": "Nous contacter",
+                
+                // Footer
+                "footer.description": "Autonomiser les jeunes Rwandais pour créer des changements positifs pour les personnes, les animaux et l'environnement.",
+                "footer.links.title": "Liens rapides",
+                "footer.links.home": "Accueil",
+                "footer.links.about": "À propos de nous",
+                "footer.links.programs": "Nos programmes",
+                "footer.links.getinvolved": "S'impliquer",
+                "footer.contact.title": "Nous contacter",
+                "footer.contact.address": "Kigali, Rwanda",
+                "footer.contact.phone": "+250 788 123 456",
+                "footer.follow.title": "Suivez-nous",
+                "footer.copyright": "© 2023 Roots & Shoots Rwanda. Tous droits réservés."
+            },
+            rw: {
+                // Page Title
+                "page.title": "Kuri Roots & Shoots Rwanda",
+                
+                // Header
+                "header.title": "Roots & Shoots Rwanda",
+                "header.subtitle": "Jane Goodall Institute",
+                
+                // Navigation
+                "nav.home": "Ahabanza",
+                "nav.about": "Kuri Twe",
+                "nav.impact": "Ingaruka",
+                "nav.news": "Amakuru",
+                "nav.getinvolved": "Injirane",
+                "nav.contact": "Twandikire",
+                
+                // Hero Section
+                "about.hero.title": "Kuri Roots & Shoots Rwanda",
+                "about.hero.subtitle": "Guhugura urubyiruko rw'u Rwanda kugira ngo rushyiremo ibyiza mu buzima bw'abantu, inyamaswa n'ibidukikije binyuze mu mirimo itegurwa n'umuryango.",
+                "about.hero.cta.impact": "Reba Ingaruka",
+                "about.hero.cta.donate": "Tanga Ubuheko",
+                
+                // What is Roots & Shoots?
+                "about.whatis.title": "Icyo Roots & Shoots ari cyo?",
+                "about.whatis.description": "Roots & Shoots ni porogaramu y'ingendo y'abato y'isi yose yashinzwe na Dokotora Jane Goodall. Ihugura abato kugira ngo babere abayobozi bafite imbabazi bakazanemo ibyiza mu miryango yabo.",
+                "about.whatis.people.title": "Abantu",
+                "about.whatis.people.description": "Kongera ubuzima no guteza imbere ubwumvikane mu miryango",
+                "about.whatis.animals.title": "Inyamaswa",
+                "about.whatis.animals.description": "Kurinda inyamaswa zo mu gasozi no guteza imbere ubuzima bwazo",
+                "about.whatis.environment.title": "Ibidukikije",
+                "about.whatis.environment.description": "Kurinda no kuvugurura isi yacu yose",
+                "about.whatis.philosophy.title": "Impuhwe → Igikorwa → Impinduka",
+                "about.whatis.philosophy.description": "Urufatiro rwacu rworoshye ariko rufite imbaraga: impuhwe izana igikorwa, ndetse ingendo z'umuryango zizana impinduka mu isi.",
+                
+                // Mission, Vision, Goal
+                "about.mvg.title": "Intego yacu, Icyerekezo n'Ingamba",
+                "about.mvg.subtitle": "Inshingano zituma dukora mu Rwanda",
+                "about.mission.title": "Intego",
+                "about.mission.description": "Guhugura urubyiruko rw'u Rwanda dukoresheje ubumenyi, ibikoresho n'inyito kugira ngo rubabe abayobozi bafite impuhwe bashyiraho impinduka zihoraho mu buzima bw'abantu, inyamaswa n'ibidukikije.",
+                "about.vision.title": "Icyerekezo",
+                "about.vision.description": "U Rwanda urubyiruko rushyira imbaraga mu kubaka imiryango ihoraho ihuza n'ibidukikije n'abandi.",
+                "about.goal.title": "Ingamba",
+                "about.goal.description": "Gushyiraho amakipe ya Roots & Shoots mu karere ka buri murenge wa Rwanda, guhuza abato 50,000 mu mirimo y'ingendo y'umuryango kugeza 2030.",
+                
+                // About Dr. Jane Goodall
+                "about.jane.title": "Kuri Dokotora Jane Goodall",
+                "about.jane.description": "Dokotora Jane Goodall, DBE, washinze Jane Goodall Institute kandi ari Umunyamabanga w'Amahoro wa UN, ni umuhanga mu by'inyamaswa no kubungabunga ibidukikije ku rwego rw'isi, ahimba ubumenyi no kurinda ubuzima bwose ku isi.",
+                "about.jane.roots": "Mu mwaka wa 1991, Dokotora Goodall yashinze Roots & Shoots hamwe n'itsinda ry'abanyeshuri bo mu Tanzania. Porogaramu yatangiye yifuzaga guhuza abato bava mu ishuri ryo ku rugo kugeza kuri kaminuza bakorana ku bibazo by'ibidukikije, kubungabunga n'ubufasha bw'umuryango.",
+                "about.jane.quote": "\"Abato, iyo bafite ubumenyi kandi bahugutse, iyo bamenye ko ibyo bakora bifite ingaruka, barashobora guhindura isi.\"",
+                "about.jane.quote_author": "- Dokotora Jane Goodall",
+                
+                // Roots & Shoots Rwanda Story
+                "about.rwanda.title": "Inkuru ya Roots & Shoots Rwanda",
+                "about.rwanda.how.title": "Uko Roots & Shoots yaje mu Rwanda",
+                "about.rwanda.how.description": "Roots & Shoots yazaniwe mu Rwanda mu mwaka wa 2008 n'itsinda ry'abarezi n'abungabungi b'ibidukikije bifuza gukomeza icyerekezo cya Dokotora Goodall cyo guhindura abato.",
+                "about.rwanda.how.growth": "Yatangiye mu mashuri atatu muri Kigali, ingendo yarirangije kwaguka mu gihugu hose nk'uko abato b'u Rwanda basabye amahirwe yo kugerwanya ibibazo by'umuryango binyuze mu mirimo y'ingendo y'umuryango.",
+                "about.rwanda.how.list.1": "Yanditse mu Rwanda Governance Board mu mwaka wa 2010",
+                "about.rwanda.how.list.2": "Yemejwe na Ministeri y'Uburezi ku mpamvu zo guhugura urubyiruko",
+                "about.rwanda.how.list.3": "Ifatanye na mashuri n'imiryango irenga 200 mu gihugu hose",
+                "about.rwanda.founding.title": "Inkuru yacu yo gushingwa",
+                "about.rwanda.founding.description": "Roots & Shoots Rwanda yashinzwe n'itsinda ry'abarezi, abungabungi b'ibidukikije n'abayobozi b'abato babonye imbaraga zo guhindura za Dokotora Goodall mu gihe bari mu Tanzania.",
+                "about.rwanda.founding.volunteer": "Kuva mu ntangiriro, ishyirahamwe ryacu ryakorwa n'abizihiza, bafite abantu bafite umwete basaba igihe cyabo cyo kugisha inama abato no korohereza imirimo y'umuryango.",
+                "about.rwanda.founding.growth_title": "Kongera kw'ishyirahamwe ku mpamvu z'abizihiza",
+                "about.rwanda.founding.growth_description": "100% by'ikwirakwiza ryacu ryakozwe n'abizihiza bafite umwete",
+                
+                // Impact Preview
+                "about.impact.title": "Ingaruka yacu mu Rwanda",
+                "about.impact.subtitle": "Gushyiraho impinduka ziboneka binyuze mu mirimo y'ingendo y'umuryango itegurwa n'abato",
+                "about.impact.trees.title": "Ibiti byashyitswe",
+                "about.impact.trees.description": "Porogaramu yo gusubiramo ibiti by'igihugu",
+                "about.impact.clubs.title": "Amakipe yashizweho",
+                "about.impact.clubs.description": "Amatsinda y'abato akora mu Rwanda hose",
+                "about.impact.youth.title": "Abato bahuguwe",
+                "about.impact.youth.description": "Abato bakora ingendo mu miryango",
+                "about.impact.cta": "Reba raporo y'ingaruka yuzuye",
+                
+                // News & Stories Preview
+                "about.news.title": "Amakuru n'inkuru vuba aha",
+                "about.news.subtitle": "Inkuru zitangaje z'impinduka mu Rwanda hose",
+                "about.news.1.title": "Inama y'Abato ku Bidukikije 2023",
+                "about.news.1.excerpt": "Urubyiruko rw'u Rwanda rwasobanuriye ibisubizo bishya ku bibazo by'ibidukikije mu nama yacu y'umwaka muri Kigali...",
+                "about.news.2.title": "Abagore mu Kubungabunga Ibidukikije",
+                "about.news.2.excerpt": "Uko abagore b'abato b'u Rwanda bari abayobozi mu gushinga ingendo zo kurinda ibidukikije mu miryango yabo...",
+                "about.news.3.title": "Intsinzi yo Gutera Imirima mu Mudugudu",
+                "about.news.3.excerpt": "Abanyeshuri bo mu Mujyi wa Kigali bahindura ahantu h'ishuri hiba imirima ifite imyaka, ifungura amazu kandi igeza ubumenyi buhoraho...",
+                "about.news.readmore": "Soma Birenzeho →",
+                "about.news.cta.all": "Reba Amakuru Yose",
+                "about.news.cta.stories": "Soma Izindi Nkuru",
+                
+                // Call to Action
+                "about.cta.title": "Hamwe Turashobora Guhindura Isi",
+                "about.cta.message": "\"Hamwe turashobora, hamwe tuzahindura, tugomba guhindura isi.\"",
+                "about.cta.donate": "Tanga Ubuheko Nonaha",
+                "about.cta.contact": "Twandikire",
+                
+                // Footer
+                "footer.description": "Guhugura urubyiruko rw'u Rwanda kugira ngo rushyiremo ibyiza mu buzima bw'abantu, inyamaswa n'ibidukikije.",
+                "footer.links.title": "Amalinki yihuse",
+                "footer.links.home": "Ahabanza",
+                "footer.links.about": "Kuri Twe",
+                "footer.links.programs": "Porogaramu zacu",
+                "footer.links.getinvolved": "Injirane",
+                "footer.contact.title": "Twandikire",
+                "footer.contact.address": "Kigali, Rwanda",
+                "footer.contact.phone": "+250 788 123 456",
+                "footer.follow.title": "Dukurikire",
+                "footer.copyright": "© 2023 Roots & Shoots Rwanda. Amategeko agenga uburenganzira yose."
+            }
+        };
+
+        // Language switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set initial language from localStorage or default to English
+            const savedLang = localStorage.getItem('rns-language') || 'en';
+            setLanguage(savedLang);
+            
+            // Add click events to language switcher buttons
+            document.querySelectorAll('.lang-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    setLanguage(lang);
+                    
+                    // Update active button state
+                    document.querySelectorAll('.lang-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.classList.add('border-green-700', 'text-green-700');
+                        btn.classList.remove('bg-green-700', 'text-white');
+                    });
+                    
+                    this.classList.add('active');
+                    this.classList.remove('border-green-700', 'text-green-700');
+                    this.classList.add('bg-green-700', 'text-white');
+                });
+            });
+            
+            // Highlight active nav link
+            const currentPage = window.location.pathname;
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === currentPage || 
+                   (currentPage.includes('about') && link.textContent.includes('About'))) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Function to set language and update all text elements
+        function setLanguage(lang) {
+            // Update localStorage
+            localStorage.setItem('rns-language', lang);
+            
+            // Update all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (i18n[lang] && i18n[lang][key]) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.value = i18n[lang][key];
+                    } else {
+                        element.textContent = i18n[lang][key];
+                    }
+                }
+            });
+            
+            // Update page title
+            document.title = i18n[lang]['page.title'];
+            
+            // Update html lang attribute
+            document.documentElement.lang = lang;
+        }
+    </script>
+</body>
+</html>
